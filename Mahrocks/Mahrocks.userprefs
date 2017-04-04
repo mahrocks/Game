@@ -2,8 +2,8 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\CameraYawnScript.cs">
     <Files>
-      <File FileName="Assets\Scripts\PlayerMoveScript.cs" Line="62" Column="40" />
-      <File FileName="Assets\Scripts\CameraYawnScript.cs" Line="23" Column="98" />
+      <File FileName="Assets\Scripts\PlayerMoveScript.cs" Line="24" Column="3" />
+      <File FileName="Assets\Scripts\CameraYawnScript.cs" Line="55" Column="21" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
