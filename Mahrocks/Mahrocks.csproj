@@ -75,6 +75,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\PlayerCameraScript.cs" />
     <Compile Include="Assets\Scripts\CameraYawnScript.cs" />
     <Compile Include="Assets\Scripts\PlayerMoveScript.cs" />
   </ItemGroup>

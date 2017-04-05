@@ -3,63 +3,73 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMoveScript : MonoBehaviour
-{
+{   
+    // Invisible object player will aways face
+    public Transform referencePoint;
 
-	Rigidbody playerRB;
-	//Reference to the player's rigidbody
-	Vector3 movement;
-	//Vector for get the move position
+    //Reference to the player's rigidbody
+    Rigidbody playerRB;
 
-	public float playerMovementSpeed;
-	//The speed that the player will move at
-	public float playerRotationSpeed;
-	//The speed that the player will rotate at
+    //Vector for get the move position
+    Vector3 movement;    
 
-	int floorMask;
+    //The speed that the player will move at
+    public float playerForwardSpeed = 10.0f;
+    public float playerBackwardSpeed = 5.0f;
+    public float playerSidewardSpeed = 5.0f;
 
-	void Awake ()
+    //The speed that the player will rotate at **
+    //public float playerRotationSpeed = 0; // ** DEPRECATED ** - Player rotation speed is the same as camera rotation speed. See PlayerCameraScript.cs
+
+    //private int floorMask;
+
+    void Awake ()
 	{
-		floorMask = LayerMask.GetMask ("Floor");
-		playerRB = GetComponent<Rigidbody> ();
-		Debug.Log ("Awaken");
+        //floorMask = LayerMask.GetMask("Floor");
+        playerRB = GetComponent<Rigidbody> ();
+		//Debug.Log ("Awaken");
 	}
 
 	// Update is called once per frame
-	void FixedUpdate ()
+	void Update ()
 	{
-
-		float h = Input.GetAxisRaw ("Horizontal");
-		float v = Input.GetAxisRaw ("Vertical");
-
-		Move (h, v);
-		Turning ();
-
-		//float translate = (Input.GetAxis("Vertical") * playerMovementSpeed) * Time.deltaTime;
-		//float rotate = (Input.GetAxis("Horizontal") * playerRotationSpeed) * Time.deltaTime;
-		//transform.Translate (0, 0, translate);
-		//transform.Rotate (0, rotate, 0);
+        /*float h = Input.GetAxisRaw("Horizontal");
+        float v = Input.GetAxisRaw("Vertical");*/
+        Move();
+        Rotate();
 	}
 
-	void Move (float h, float v)
+    /*void Move(float h, float v)*/
+    void Move ()
 	{
-		movement.Set (h, 0f, v);
-		movement = movement.normalized * playerMovementSpeed * Time.deltaTime;
+        /*
+        movement.Set(h, 0f, v);
+        movement = movement.normalized * playerMovementSpeed * Time.deltaTime;
 
-		playerRB.MovePosition (transform.position + movement);
-	}
+        playerRB.MovePosition(transform.position + movement);
+        */
+        float verticalAxis = Input.GetAxis("Vertical");
+        float translateVertical, translateHorizontal;
 
-	void Turning ()
-	{
-		Ray camRay = Camera.main.ScreenPointToRay (Input.mousePosition);
+        if (verticalAxis > 0) {
+            translateVertical = (verticalAxis * playerForwardSpeed) * Time.deltaTime;
+        }
+        else {
+            translateVertical = (verticalAxis * playerBackwardSpeed) * Time.deltaTime;
+        }
 
-		RaycastHit floorHit;
+        translateHorizontal = (Input.GetAxis("Horizontal") * playerSidewardSpeed) * Time.deltaTime;
+        transform.Translate(translateHorizontal, 0, translateVertical);
+    }
 
-		if (Physics.Raycast (camRay, out floorHit, floorMask)) {
-			Vector3 playerToMouse = floorHit.point - transform.position;
-			playerToMouse.y = 0f;
+    void Rotate(){
 
-			Quaternion newRotation = Quaternion.LookRotation (playerToMouse);
-			playerRB.MoveRotation (newRotation);
-		}
-	}
+        float angularX = referencePoint.transform.position.x; // reference point x axis rotation value
+        float angularY = transform.position.y;                // player y axis rotation value
+        float angularZ = referencePoint.transform.position.z; // reference point z axis rotation value
+
+        Vector3 newAngularPosition = new Vector3(angularX, angularY, angularZ);        
+        
+        transform.LookAt(newAngularPosition);
+    }
 }
