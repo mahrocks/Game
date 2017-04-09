@@ -2,57 +2,77 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemySpawn : MonoBehaviour {
-    public GameObject[] enemy;
-    public Transform enemyPos;
-    public int numEnemies = 0;
-    public int maxEnemies = 5;
-    private float repeatRate = 1.5f;
-    public float minWait = 1.0f;
-    public float maxWait = 3.0f;
-    public float passedTime = 0.0f;
+public class EnemySpawn : MonoBehaviour
+{
+	public GameObject enemy;
+	public GameObject player;
+	public Transform enemyPos;
+	public int numEnemies = 0;
+	public int maxEnemies = 5;
 
+	//private float repeatRate = 1.5f;
+	public float minWait = 1.0f;
+	public float maxWait = 3.0f;
+	private float passedTime = 0.0f;
 
+	private bool inside = false;
+	private Color[] colors = new Color[] {
+		Color.red,
+		Color.blue,
+		Color.black,
+		Color.green,
+		Color.gray,
+		Color.yellow,
+		Color.white
+	};
 
-	// Use this for initialization
-	void Start () {
-		
+	void Awake ()
+	{
+		player = GameObject.FindGameObjectWithTag ("Player");
 	}
 
-    void OnTriggerStay(Collider other)
-    {
-        if(other.gameObject.tag == "Player")
-        {
-            numEnemies = 0;
-            foreach(GameObject g in GameObject.FindGameObjectsWithTag("PlaneEnemies"))
-            {
-                numEnemies++;
-            }
-            if (numEnemies < maxEnemies)
-            {
-                if (passedTime < maxWait  && passedTime > minWait)
-                {
+	void OnTriggerStay (Collider other)
+	{
+		if (other.gameObject.tag == "Player") {
+			if (inside == false) {
+				inside = true;
+				foreach (GameObject g in GameObject.FindGameObjectsWithTag("PlaneEnemies")) {
+					numEnemies++;
+				}
+			}
+			if (numEnemies < maxEnemies) {
+				if (passedTime < maxWait && passedTime > minWait) { //Between 1 and 3 seconds
 
-                    if (Random.Range(0.0f, 1.0f) >= 0.5f)
-                    {
-                        Instantiate(enemy[Random.Range(0,2)], enemyPos.position, enemyPos.rotation);
-                        passedTime = 0.0f;
-                    }
-                }else{
-                    if (passedTime > maxWait)
-                    {
-                        Instantiate(enemy[Random.Range(0,2)], enemyPos.position, enemyPos.rotation);
-                        passedTime = 0.0f;
+					if (Random.Range (0.0f, 1.0f) >= 0.5f) { // Has 50% of spawning
+						GameObject enemyCreated = Instantiate (enemy, new Vector3 ((numEnemies * 2.0f + 168.0f), 0.5f, 69f), Quaternion.LookRotation (player.transform.position - enemyPos.position, Vector3.up));
+						enemyCreated.GetComponent<Renderer> ().material.color = colors [Random.Range (0, colors.Length)];
+						passedTime = 0.0f;
+						numEnemies++;
+					}
+				} else {
+					if (passedTime > maxWait) { // Above 3s, spawn right away
+						GameObject enemyCreated = Instantiate (enemy, new Vector3 ((numEnemies * 2.0f + 168.0f), 0.5f, 69f), Quaternion.LookRotation (player.transform.position - enemyPos.position, Vector3.up));
+						enemyCreated.GetComponent<Renderer> ().material.color = colors [Random.Range (0, colors.Length)];
+						passedTime = 0.0f;
+						numEnemies++;
 
-                    }else
-                    {
-                        passedTime += Time.deltaTime;
+					} else { //Or just add the time
+						passedTime += Time.deltaTime;
 
-                    }
-                }
-            }
-        }
-    }
+					}
+				}
+			}
+		}
+	}
+
+	void OnTriggerExit (Collider other)
+	{
+		inside = false;
+		foreach (GameObject g in GameObject.FindGameObjectsWithTag("PlaneEnemies")) {
+			Destroy (g);
+		}
+		numEnemies = 0;
+	}
 	
 
 }
