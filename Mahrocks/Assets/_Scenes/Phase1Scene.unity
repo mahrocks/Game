@@ -501,7 +501,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4744446293683610, guid: 1287ea9b9da8162409dc2241e6024f72, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 36
+      value: 58.7
       objectReference: {fileID: 0}
     - target: {fileID: 4744446293683610, guid: 1287ea9b9da8162409dc2241e6024f72, type: 2}
       propertyPath: m_LocalRotation.x
@@ -540,6 +540,11 @@ Prefab:
       value: 
       objectReference: {fileID: 4431427266979060, guid: add1030082a682246906e070823571fd,
         type: 2}
+    - target: {fileID: 54874756581265940, guid: 1287ea9b9da8162409dc2241e6024f72,
+        type: 2}
+      propertyPath: m_Constraints
+      value: 84
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1287ea9b9da8162409dc2241e6024f72, type: 2}
   m_IsPrefabParent: 0
@@ -1218,10 +1223,10 @@ MonoBehaviour:
   cameraDistance: 5
   cameraDistanceTolerance: 2
   cameraYOffset: 1
-  xRotationSpeed: 10
+  xRotationSpeed: 40
   yRotationSpeed: 20
   cameraMinYAngle: -20
-  cameraMaxYAngle: 80
+  cameraMaxYAngle: 20
 --- !u!1 &1073270040
 GameObject:
   m_ObjectHideFlags: 0
@@ -1432,7 +1437,7 @@ Animator:
   m_GameObject: {fileID: 1208032267}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 107b2eb0ba3888b4aa2945da7478ee64, type: 2}
+  m_Controller: {fileID: 9100000, guid: 2e7a863b6eca72e4ba9f849a5aaccd9b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -1723,8 +1728,8 @@ RectTransform:
   m_Father: {fileID: 186875344}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -352, y: 200}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0, y: 1}

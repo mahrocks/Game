@@ -10,17 +10,19 @@ public class PlayerMoveScript : MonoBehaviour
 	public GameObject enemy;
 	public Transform enemyPos;
 
+	public float spawnTime = 5.0f;
+
 	//Vector for get the move position
 	Vector3 movement;
 
 	//The speed that the player will move at
-	/*public float playerForwardSpeed = 10.0f;
+	public float playerForwardSpeed = 10.0f;
 	public float playerBackwardSpeed = 5.0f;
-	public float playerSidewardSpeed = 5.0f;*/
-	public float playerMovementSpeed = 6.0f;
+	public float playerSidewardSpeed = 5.0f;
+//	public float playerMovementSpeed = 6.0f;
 
 	Animator anim; // Reference to the animator component
-	Rigidbody playerRB;
+//	Rigidbody playerRB;
 	private float passedTime = 0.0f;
 	private Color[] colors = new Color[] {
 		Color.red,
@@ -40,7 +42,7 @@ public class PlayerMoveScript : MonoBehaviour
 	void Awake ()
 	{
 		anim = GetComponent <Animator> ();
-		playerRB = GetComponent <Rigidbody> ();
+		//playerRB = GetComponent <Rigidbody> ();
 		//floorMask = LayerMask.GetMask("Floor");
 		//Debug.Log ("Awaken");
 	}
@@ -54,22 +56,21 @@ public class PlayerMoveScript : MonoBehaviour
 	{
 		float h = Input.GetAxisRaw("Horizontal");
         float v = Input.GetAxisRaw("Vertical");
-		Move (h,v);
+		Move (h, v);
 		Rotate ();
 		Animating (h, v);
 	}
 
 	/*void Move(float h, float v)*/
-	void Move (float h, float v)
+	void Move (float horizontalAxis, float verticalAxis)
 	{
 
-        movement.Set(h, 0f, v);
+        /*movement.Set(h, 0f, v);
         movement = movement.normalized * playerMovementSpeed * Time.deltaTime;
 
-        playerRB.MovePosition(transform.position + movement);
+        playerRB.MovePosition(transform.position + movement);*/
 
-		/*
-		float verticalAxis = Input.GetAxis ("Vertical");
+		//float verticalAxis = Input.GetAxis ("Vertical");
 		float translateVertical, translateHorizontal;
 
 		if (verticalAxis > 0) {
@@ -78,11 +79,8 @@ public class PlayerMoveScript : MonoBehaviour
 			translateVertical = (verticalAxis * playerBackwardSpeed) * Time.deltaTime;
 		}
 
-		translateHorizontal = (Input.GetAxis ("Horizontal") * playerSidewardSpeed) * Time.deltaTime;
+		translateHorizontal = (horizontalAxis * playerSidewardSpeed) * Time.deltaTime;
 		transform.Translate (translateHorizontal, 0, translateVertical);
-		*/
-
-
 	}
 
 	void Rotate ()
@@ -108,8 +106,8 @@ public class PlayerMoveScript : MonoBehaviour
 
 	void spawnGlobalEnemies ()
 	{
-		if (passedTime > 5.0f) {
-			GameObject enemyCreated = Instantiate (enemy, new Vector3 ((Random.Range (0, 3) * 2.0f + transform.position.x), 0.5f, Random.Range (0, 3) * 2.0f + transform.position.z), Quaternion.LookRotation (transform.position - enemyPos.position, Vector3.up));
+		if (passedTime > spawnTime) {
+			GameObject enemyCreated = Instantiate (enemy, new Vector3 ((Random.Range (1, 4) * 4.0f + transform.position.x), 0.5f, Random.Range (1, 4) * 4.0f + transform.position.z), Quaternion.LookRotation (transform.position - enemyPos.position, Vector3.up));
 			enemyCreated.GetComponent<Renderer> ().material.color = colors [Random.Range (0, colors.Length)];
 			enemyCreated.tag = "Enemies";
 			passedTime = 0.0f;
