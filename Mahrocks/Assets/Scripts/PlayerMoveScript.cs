@@ -14,10 +14,13 @@ public class PlayerMoveScript : MonoBehaviour
 	Vector3 movement;
 
 	//The speed that the player will move at
-	public float playerForwardSpeed = 10.0f;
+	/*public float playerForwardSpeed = 10.0f;
 	public float playerBackwardSpeed = 5.0f;
-	public float playerSidewardSpeed = 5.0f;
+	public float playerSidewardSpeed = 5.0f;*/
+	public float playerMovementSpeed = 6.0f;
 
+	Animator anim; // Reference to the animator component
+	Rigidbody playerRB;
 	private float passedTime = 0.0f;
 	private Color[] colors = new Color[] {
 		Color.red,
@@ -36,6 +39,8 @@ public class PlayerMoveScript : MonoBehaviour
 
 	void Awake ()
 	{
+		anim = GetComponent <Animator> ();
+		playerRB = GetComponent <Rigidbody> ();
 		//floorMask = LayerMask.GetMask("Floor");
 		//Debug.Log ("Awaken");
 	}
@@ -47,21 +52,23 @@ public class PlayerMoveScript : MonoBehaviour
 	// Update is called once per frame
 	void FixedUpdate ()
 	{
-		/*float h = Input.GetAxisRaw("Horizontal");
-        float v = Input.GetAxisRaw("Vertical");*/
-		Move ();
+		float h = Input.GetAxisRaw("Horizontal");
+        float v = Input.GetAxisRaw("Vertical");
+		Move (h,v);
 		Rotate ();
+		Animating (h, v);
 	}
 
 	/*void Move(float h, float v)*/
-	void Move ()
+	void Move (float h, float v)
 	{
-		/*
+
         movement.Set(h, 0f, v);
         movement = movement.normalized * playerMovementSpeed * Time.deltaTime;
 
         playerRB.MovePosition(transform.position + movement);
-        */
+
+		/*
 		float verticalAxis = Input.GetAxis ("Vertical");
 		float translateVertical, translateHorizontal;
 
@@ -73,6 +80,9 @@ public class PlayerMoveScript : MonoBehaviour
 
 		translateHorizontal = (Input.GetAxis ("Horizontal") * playerSidewardSpeed) * Time.deltaTime;
 		transform.Translate (translateHorizontal, 0, translateVertical);
+		*/
+
+
 	}
 
 	void Rotate ()
@@ -85,6 +95,15 @@ public class PlayerMoveScript : MonoBehaviour
 		Vector3 newAngularPosition = new Vector3 (angularX, angularY, angularZ);        
         
 		transform.LookAt (newAngularPosition);
+	}
+
+	void Animating (float h, float v)
+	{
+		// Create a boolean that is true if either of the input axes is non-zero.
+		bool walking = h != 0f || v != 0f;
+
+		// Tell the animator whether or not the player is walking.
+		anim.SetBool ("isWalking", walking);
 	}
 
 	void spawnGlobalEnemies ()
