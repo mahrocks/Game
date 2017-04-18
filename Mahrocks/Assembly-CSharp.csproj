@@ -46,9 +46,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\AreaEnemySpawnScript.cs" />
      <Compile Include="Assets\Scripts\CameraYawnScript.cs" />
      <Compile Include="Assets\Scripts\EnemyMovement.cs" />
-     <Compile Include="Assets\Scripts\EnemySpawn.cs" />
+     <Compile Include="Assets\Scripts\GlobalEnemySpawnScript.cs" />
      <Compile Include="Assets\Scripts\PlayerCameraScript.cs" />
      <Compile Include="Assets\Scripts\PlayerMoveScript.cs" />
  <Reference Include="UnityEngine.UI">

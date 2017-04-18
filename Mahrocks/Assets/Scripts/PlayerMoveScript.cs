@@ -7,10 +7,10 @@ public class PlayerMoveScript : MonoBehaviour
 	// Invisible object player will aways face
 	public Transform referencePoint;
 
-	public GameObject enemy;
-	public Transform enemyPos;
-
-	public float spawnTime = 5.0f;
+//	public GameObject enemy;
+//	public Transform enemyPos;
+//
+//	public float spawnTime = 5.0f;
 
 	//Vector for get the move position
 	Vector3 movement;
@@ -27,16 +27,16 @@ public class PlayerMoveScript : MonoBehaviour
 	Animator anim; // Reference to the animator component
 //	Rigidbody playerRB;
 
-	private float passedTime = 0.0f;
-	private Color[] colors = new Color[] {
-		Color.red,
-		Color.blue,
-		Color.black,
-		Color.green,
-		Color.gray,
-		Color.yellow,
-		Color.white
-	};
+//	private float passedTime = 0.0f;
+//	private Color[] colors = new Color[] {
+//		Color.red,
+//		Color.blue,
+//		Color.black,
+//		Color.green,
+//		Color.gray,
+//		Color.yellow,
+//		Color.white
+//	};
 
 	//The speed that the player will rotate at **
 	//public float playerRotationSpeed = 0; // ** DEPRECATED ** - Player rotation speed is the same as camera rotation speed. See PlayerCameraScript.cs
@@ -51,10 +51,10 @@ public class PlayerMoveScript : MonoBehaviour
 		//Debug.Log ("Awaken");
 	}
 
-	void Update ()
-	{
-		spawnGlobalEnemies ();
-	}
+//	void Update ()
+//	{
+//		spawnGlobalEnemies ();
+//	}
 
 	// Update is called once per frame
 	void FixedUpdate ()
@@ -63,8 +63,6 @@ public class PlayerMoveScript : MonoBehaviour
         float v = Input.GetAxisRaw("Vertical");
 		Move (h, v);
 		Rotate ();
-	
-
 	}
 
 	/*void Move(float h, float v)*/
@@ -110,15 +108,15 @@ public class PlayerMoveScript : MonoBehaviour
 	}
 
 
-	void spawnGlobalEnemies ()
-	{
-		if (passedTime > spawnTime) {
-			GameObject enemyCreated = Instantiate (enemy, new Vector3 ((Random.Range (1, 4) * 4.0f + transform.position.x), 0.5f, Random.Range (1, 4) * 4.0f + transform.position.z), Quaternion.LookRotation (transform.position - enemyPos.position, Vector3.up));
-			enemyCreated.GetComponent<Renderer> ().material.color = colors [Random.Range (0, colors.Length)];
-			enemyCreated.tag = "Enemies";
-			passedTime = 0.0f;
-		} else {
-			passedTime += Time.deltaTime;
-		}
-	}
+//	void spawnGlobalEnemies ()
+//	{
+//		if (passedTime > spawnTime) {
+//			GameObject enemyCreated = Instantiate (enemy, new Vector3 ((Random.Range (1, 4) * 4.0f + transform.position.x), 0.5f, Random.Range (1, 4) * 4.0f + transform.position.z), Quaternion.LookRotation (transform.position - enemyPos.position, Vector3.up));
+//			enemyCreated.GetComponent<Renderer> ().material.color = colors [Random.Range (0, colors.Length)];
+//			enemyCreated.tag = "Enemies";
+//			passedTime = 0.0f;
+//		} else {
+//			passedTime += Time.deltaTime;
+//		}
+//	}
 }
