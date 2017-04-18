@@ -15,14 +15,18 @@ public class PlayerMoveScript : MonoBehaviour
 	//Vector for get the move position
 	Vector3 movement;
 
+	//time that takes swapping states
+	public float speedSmoothTime = 0.1f;
+
 	//The speed that the player will move at
-	public float playerForwardSpeed = 10.0f;
-	public float playerBackwardSpeed = 5.0f;
-	public float playerSidewardSpeed = 5.0f;
+	public float playerForwardSpeed = 5.0f;
+	public float playerBackwardSpeed = 2.0f;
+	public float playerSidewardSpeed = 2.0f;
 //	public float playerMovementSpeed = 6.0f;
 
 	Animator anim; // Reference to the animator component
 //	Rigidbody playerRB;
+
 	private float passedTime = 0.0f;
 	private Color[] colors = new Color[] {
 		Color.red,
@@ -39,7 +43,7 @@ public class PlayerMoveScript : MonoBehaviour
 
 	//private int floorMask;
 
-	void Awake ()
+	void Start ()
 	{
 		anim = GetComponent <Animator> ();
 		//playerRB = GetComponent <Rigidbody> ();
@@ -51,6 +55,7 @@ public class PlayerMoveScript : MonoBehaviour
 	{
 		spawnGlobalEnemies ();
 	}
+
 	// Update is called once per frame
 	void FixedUpdate ()
 	{
@@ -58,12 +63,16 @@ public class PlayerMoveScript : MonoBehaviour
         float v = Input.GetAxisRaw("Vertical");
 		Move (h, v);
 		Rotate ();
-		Animating (h, v);
+	
+
 	}
 
 	/*void Move(float h, float v)*/
 	void Move (float horizontalAxis, float verticalAxis)
 	{
+		Vector2 input = new Vector2 (horizontalAxis, verticalAxis);
+		Vector2 inputDir = input.normalized;
+
 
         /*movement.Set(h, 0f, v);
         movement = movement.normalized * playerMovementSpeed * Time.deltaTime;
@@ -81,6 +90,11 @@ public class PlayerMoveScript : MonoBehaviour
 
 		translateHorizontal = (horizontalAxis * playerSidewardSpeed) * Time.deltaTime;
 		transform.Translate (translateHorizontal, 0, translateVertical);
+	
+		//change blend tree speed value
+		float animationSpeedPercent = 1 * inputDir.magnitude;
+		anim.SetFloat ("speed", animationSpeedPercent, speedSmoothTime, Time.deltaTime);
+
 	}
 
 	void Rotate ()
@@ -95,14 +109,6 @@ public class PlayerMoveScript : MonoBehaviour
 		transform.LookAt (newAngularPosition);
 	}
 
-	void Animating (float h, float v)
-	{
-		// Create a boolean that is true if either of the input axes is non-zero.
-		bool walking = h != 0f || v != 0f;
-
-		// Tell the animator whether or not the player is walking.
-		anim.SetBool ("isWalking", walking);
-	}
 
 	void spawnGlobalEnemies ()
 	{
