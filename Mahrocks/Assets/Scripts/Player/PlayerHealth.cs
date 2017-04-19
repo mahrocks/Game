@@ -8,8 +8,11 @@ public class PlayerHealth : MonoBehaviour {
 	public int startingHealth = 100;
 	public Slider healthSlider;
 	public Image damageImage;
+	public RawImage deathImage;
 	public float flashSpeed = 5.0f;
+	public float deathMessageSpeed = 50.0f;
 	public Color flashColour = new Color(1.0f, 0.0f, 0.0f, 0.1f);
+	public Color deathColour = new Color(1.0f, 1.0f, 1.0f, 1.0f);
 
 	private int currentHealth = 100;
 	private Animator playerAnimator;
@@ -29,6 +32,14 @@ public class PlayerHealth : MonoBehaviour {
 		else {
 			damageImage.color = Color.Lerp (damageImage.color, Color.clear, flashSpeed * Time.deltaTime);
 		}
+
+		if (playerIsDead) {
+			deathImage.color = Color.Lerp (deathImage.color, deathColour, deathMessageSpeed * Time.deltaTime);
+		} 
+		else {
+			deathImage.color = Color.clear;
+		}
+			
 		playerDamaged = false;
 	}
 

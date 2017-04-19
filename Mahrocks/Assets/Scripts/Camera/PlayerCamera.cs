@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerCamera : MonoBehaviour {
 
     // public variables for camera configuration
-    public Transform targetPlayer;
+	public GameObject playerObject;
 
     public float cameraDistance = 10f; 
     public float cameraDistanceTolerance = 5f; // how close/far can camera be from the player
@@ -19,6 +19,9 @@ public class PlayerCamera : MonoBehaviour {
     public float cameraMaxYAngle = 80f;
 
     // private variables for camera control
+	private Transform playerTransform;
+	private PlayerHealth player;
+
     private Rigidbody cameraRb;
 
     private float cameraX;
@@ -30,6 +33,9 @@ public class PlayerCamera : MonoBehaviour {
     private const float correctionFactor = 0.02f;
 
     void Start () {
+		playerTransform = playerObject.transform;
+		player = playerObject.GetComponent <PlayerHealth> ();
+
         Vector3 angles = transform.eulerAngles;
         cameraX = angles.y;
         cameraY = angles.x;
@@ -46,7 +52,7 @@ public class PlayerCamera : MonoBehaviour {
 	
 	// Update is called once per frame
 	void LateUpdate () {
-		if (targetPlayer){
+		if (playerTransform && !player.isDead()){
             cameraX += Input.GetAxis("Mouse X") * xRotationSpeed * cameraDistance * correctionFactor;
             cameraY -= Input.GetAxis("Mouse Y") * yRotationSpeed * cameraDistance * correctionFactor;
 
@@ -58,11 +64,11 @@ public class PlayerCamera : MonoBehaviour {
             cameraDistance = Mathf.Clamp(cameraDistance - Input.GetAxis("Mouse ScrollWheel") * 5, cameraMinDistance, cameraMaxDistance);
 
             RaycastHit raycast;
-            if (Physics.Linecast(targetPlayer.position, transform.position, out raycast)){
+            if (Physics.Linecast(playerTransform.position, transform.position, out raycast)){
                 cameraDistance -= raycast.distance;
             }
             Vector3 negDistance = new Vector3(0.0f, 0.0f, -cameraDistance);
-            Vector3 position = rotation * negDistance + targetPlayer.position + new Vector3(0, cameraYOffset, 0);
+            Vector3 position = rotation * negDistance + playerTransform.position + new Vector3(0, cameraYOffset, 0);
 
             transform.rotation = rotation;
             transform.position = position;
