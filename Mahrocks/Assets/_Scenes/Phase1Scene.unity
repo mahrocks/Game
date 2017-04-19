@@ -367,7 +367,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.69411767, g: 0.18431373, b: 0.09019608, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -500,7 +500,7 @@ GameObject:
   - component: {fileID: 629110638}
   - component: {fileID: 629110640}
   - component: {fileID: 629110639}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: EventSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -562,7 +562,7 @@ GameObject:
   - component: {fileID: 632030028}
   - component: {fileID: 632030029}
   m_Layer: 5
-  m_Name: Slider
+  m_Name: HealthSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -622,7 +622,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 1260811105}
   m_HandleRect: {fileID: 0}
@@ -931,7 +931,6 @@ GameObject:
   - component: {fileID: 860733618}
   - component: {fileID: 860733617}
   - component: {fileID: 860733616}
-  - component: {fileID: 860733615}
   - component: {fileID: 860733619}
   m_Layer: 0
   m_Name: SpawnArea
@@ -940,18 +939,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &860733615
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114924586320988730, guid: 7681291dc6215c341a9f99349eb3983a,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 860733614}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bcff95fe6811d2046becf6294dc39cba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &860733616
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1033,7 +1020,7 @@ GameObject:
   - component: {fileID: 971831188}
   - component: {fileID: 971831189}
   m_Layer: 5
-  m_Name: Slider
+  m_Name: BeerSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1111,6 +1098,22 @@ MonoBehaviour:
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: df12650b148ea2841a071d6fa533b430, type: 3}
   m_PrefabInternal: {fileID: 1661983245}
+--- !u!114 &1045212386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1045212385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c122f5987674b30488c3b5bd4e2b5eb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHealth: 80
+  healthSlider: {fileID: 632030029}
+  damageImage: {fileID: 416711340}
+  flashSpeed: 5
+  flashColour: {r: 1, g: 0, b: 0, a: 0.1}
 --- !u!4 &1045212387 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: df12650b148ea2841a071d6fa533b430, type: 3}
@@ -1274,7 +1277,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1073270041}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1662,6 +1665,10 @@ Prefab:
     - target: {fileID: 400004, guid: df12650b148ea2841a071d6fa533b430, type: 3}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: df12650b148ea2841a071d6fa533b430, type: 3}
+      propertyPath: m_Name
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: df12650b148ea2841a071d6fa533b430, type: 3}

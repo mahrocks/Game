@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMoveScript : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
 	// Invisible object player will aways face
 	public Transform referencePoint;
@@ -24,7 +24,8 @@ public class PlayerMoveScript : MonoBehaviour
 	public float playerSidewardSpeed = 2.0f;
 //	public float playerMovementSpeed = 6.0f;
 
-	Animator anim; // Reference to the animator component
+	private Animator anim; // Reference to the animator component
+	private PlayerHealth playerHealth;
 //	Rigidbody playerRB;
 
 //	private float passedTime = 0.0f;
@@ -46,6 +47,7 @@ public class PlayerMoveScript : MonoBehaviour
 	void Start ()
 	{
 		anim = GetComponent <Animator> ();
+		playerHealth = GetComponent <PlayerHealth> ();
 		//playerRB = GetComponent <Rigidbody> ();
 		//floorMask = LayerMask.GetMask("Floor");
 		//Debug.Log ("Awaken");
@@ -59,10 +61,12 @@ public class PlayerMoveScript : MonoBehaviour
 	// Update is called once per frame
 	void FixedUpdate ()
 	{
-		float h = Input.GetAxisRaw("Horizontal");
-        float v = Input.GetAxisRaw("Vertical");
-		Move (h, v);
-		Rotate ();
+		if (!playerHealth.isDead ()) {
+			float h = Input.GetAxisRaw ("Horizontal");
+			float v = Input.GetAxisRaw ("Vertical");
+			Move (h, v);
+			Rotate ();
+		}
 	}
 
 	/*void Move(float h, float v)*/

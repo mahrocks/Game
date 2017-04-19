@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GlobalEnemySpawnScript : MonoBehaviour {
+public class GlobalEnemySpawn : MonoBehaviour {
 
 	public float spawnTime = 5.0f;
 

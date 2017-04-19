@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AreaEnemySpawnScript : MonoBehaviour
+public class AreaEnemySpawn : MonoBehaviour
 {
 	public GameObject enemy;
 	public GameObject player;

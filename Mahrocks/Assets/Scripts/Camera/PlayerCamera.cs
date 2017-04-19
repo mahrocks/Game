@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerCameraScript : MonoBehaviour {
+public class PlayerCamera : MonoBehaviour {
 
     // public variables for camera configuration
     public Transform targetPlayer;

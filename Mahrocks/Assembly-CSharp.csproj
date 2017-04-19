@@ -46,12 +46,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\AreaEnemySpawnScript.cs" />
-     <Compile Include="Assets\Scripts\CameraYawnScript.cs" />
-     <Compile Include="Assets\Scripts\EnemyMovement.cs" />
-     <Compile Include="Assets\Scripts\GlobalEnemySpawnScript.cs" />
-     <Compile Include="Assets\Scripts\PlayerCameraScript.cs" />
-     <Compile Include="Assets\Scripts\PlayerMoveScript.cs" />
+     <Compile Include="Assets\Scripts\Camera\PlayerCamera.cs" />
+     <Compile Include="Assets\Scripts\Camera\_DEPRECATED_CameraYawnScript.cs" />
+     <Compile Include="Assets\Scripts\Enemies\AreaEnemySpawn.cs" />
+     <Compile Include="Assets\Scripts\Enemies\EnemyAttack.cs" />
+     <Compile Include="Assets\Scripts\Enemies\EnemyMovement.cs" />
+     <Compile Include="Assets\Scripts\Enemies\GlobalEnemySpawn.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerHealth.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerThirst.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
