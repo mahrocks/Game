@@ -2,22 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyAttack : MonoBehaviour
+public class PlayerAttack : MonoBehaviour
 {
 
 	public float delayBetweenAttacks = 0.5f;
-	public int rawAttackDamage = 5;
-	public float attackRange = 0.8f;
-
-	//private Animator enemyAnimator;
+	public int rawAttackDamage = 1;
 
 	private GameObject playerObject;
+	private GameObject enemyObject;
 	private PlayerHealth player;
-	private bool playerInRange;
+	private EnemyLife enemy;
+	private bool enemyInRange;
 
-	private SphereCollider attackCollider;
+	private BoxCollider attackCollider;
 	private float timer;
 
+	// Use this for initialization
 	void Awake ()
 	{
 		playerObject = GameObject.FindGameObjectWithTag ("Player");
@@ -25,24 +25,19 @@ public class EnemyAttack : MonoBehaviour
 
 		//enemyAnimator = GetComponent <Animator> ();
 
-		attackCollider = GetComponent <SphereCollider> ();
-		attackCollider.radius = attackRange;
+		attackCollider = GetComponent <BoxCollider> ();
 	}
-
+	
+	// Update is called once per frame
 	void Update ()
 	{
-		timer += Time.deltaTime;
-
-		if ((playerInRange) && (timer >= delayBetweenAttacks)) {
-			Attack ();
-		}
+		
 	}
 
-	/* called when an object enters attack range collider */
 	void OnTriggerEnter (Collider other)
 	{
 		if (other.gameObject == playerObject) {
-			playerInRange = true;
+			enemyInRange = true;
 		}
 	}
 
@@ -50,7 +45,7 @@ public class EnemyAttack : MonoBehaviour
 	void OnTriggerExit (Collider other)
 	{
 		if (other.gameObject == playerObject) {
-			playerInRange = false;
+			enemyInRange = false;
 		}
 	}
 
@@ -59,7 +54,7 @@ public class EnemyAttack : MonoBehaviour
 		timer = 0.0f;
 
 		if (!player.isDead ()) {
-			player.TakeDamage (rawAttackDamage);
+			enemy.TakeDamage (rawAttackDamage);
 		}
 	}
 }

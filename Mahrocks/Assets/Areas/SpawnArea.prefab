@@ -121,13 +121,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0bf14ae06dc793439dc3e4d0722479b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: []
+  enemy: {fileID: 0}
+  player: {fileID: 0}
   enemyPos: {fileID: 4930568534728448}
   numEnemies: 0
   maxEnemies: 5
   minWait: 1
   maxWait: 3
-  passedTime: 0
 --- !u!135 &135560263587497940
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -138,5 +138,5 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.4
   m_Center: {x: 0, y: 0, z: 0}
