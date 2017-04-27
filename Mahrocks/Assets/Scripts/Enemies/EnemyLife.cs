@@ -24,7 +24,7 @@ public class EnemyLife : MonoBehaviour
 		currentHealth -= amount;
 
 		if (currentHealth <= 0) {
-			Destroy ();
+			//Destroy ();
 		}
 	}
 }
