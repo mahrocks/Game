@@ -49,12 +49,11 @@ public class PlayerAttack : MonoBehaviour
 		}
 	}
 
-	void Attack ()
+	/*void Attack ()
 	{
-		timer = 0.0f;
 
 		if (!player.isDead ()) {
 			enemy.TakeDamage (rawAttackDamage);
 		}
-	}
+	}*/
 }

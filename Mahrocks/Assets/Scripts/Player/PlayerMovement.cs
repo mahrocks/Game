@@ -7,10 +7,10 @@ public class PlayerMovement : MonoBehaviour
 	// Invisible object player will aways face
 	public Transform referencePoint;
 
-//	public GameObject enemy;
-//	public Transform enemyPos;
-//
-//	public float spawnTime = 5.0f;
+	//	public GameObject enemy;
+	//	public Transform enemyPos;
+	//
+	//	public float spawnTime = 5.0f;
 
 	//Vector for get the move position
 	Vector3 movement;
@@ -22,22 +22,23 @@ public class PlayerMovement : MonoBehaviour
 	public float playerForwardSpeed = 5.0f;
 	public float playerBackwardSpeed = 2.0f;
 	public float playerSidewardSpeed = 2.0f;
-//	public float playerMovementSpeed = 6.0f;
+	//	public float playerMovementSpeed = 6.0f;
 
-	private Animator anim; // Reference to the animator component
+	private Animator anim;
+	// Reference to the animator component
 	private PlayerHealth playerHealth;
-//	Rigidbody playerRB;
+	//	Rigidbody playerRB;
 
-//	private float passedTime = 0.0f;
-//	private Color[] colors = new Color[] {
-//		Color.red,
-//		Color.blue,
-//		Color.black,
-//		Color.green,
-//		Color.gray,
-//		Color.yellow,
-//		Color.white
-//	};
+	//	private float passedTime = 0.0f;
+	//	private Color[] colors = new Color[] {
+	//		Color.red,
+	//		Color.blue,
+	//		Color.black,
+	//		Color.green,
+	//		Color.gray,
+	//		Color.yellow,
+	//		Color.white
+	//	};
 
 	//The speed that the player will rotate at **
 	//public float playerRotationSpeed = 0; // ** DEPRECATED ** - Player rotation speed is the same as camera rotation speed. See PlayerCameraScript.cs
@@ -53,10 +54,10 @@ public class PlayerMovement : MonoBehaviour
 		//Debug.Log ("Awaken");
 	}
 
-//	void Update ()
-//	{
-//		spawnGlobalEnemies ();
-//	}
+	//	void Update ()
+	//	{
+	//		spawnGlobalEnemies ();
+	//	}
 
 	// Update is called once per frame
 	void FixedUpdate ()
@@ -76,7 +77,7 @@ public class PlayerMovement : MonoBehaviour
 		Vector2 inputDir = input.normalized;
 
 
-        /*movement.Set(h, 0f, v);
+		/*movement.Set(h, 0f, v);
         movement = movement.normalized * playerMovementSpeed * Time.deltaTime;
 
         playerRB.MovePosition(transform.position + movement);*/
@@ -112,15 +113,15 @@ public class PlayerMovement : MonoBehaviour
 	}
 
 
-//	void spawnGlobalEnemies ()
-//	{
-//		if (passedTime > spawnTime) {
-//			GameObject enemyCreated = Instantiate (enemy, new Vector3 ((Random.Range (1, 4) * 4.0f + transform.position.x), 0.5f, Random.Range (1, 4) * 4.0f + transform.position.z), Quaternion.LookRotation (transform.position - enemyPos.position, Vector3.up));
-//			enemyCreated.GetComponent<Renderer> ().material.color = colors [Random.Range (0, colors.Length)];
-//			enemyCreated.tag = "Enemies";
-//			passedTime = 0.0f;
-//		} else {
-//			passedTime += Time.deltaTime;
-//		}
-//	}
+	//	void spawnGlobalEnemies ()
+	//	{
+	//		if (passedTime > spawnTime) {
+	//			GameObject enemyCreated = Instantiate (enemy, new Vector3 ((Random.Range (1, 4) * 4.0f + transform.position.x), 0.5f, Random.Range (1, 4) * 4.0f + transform.position.z), Quaternion.LookRotation (transform.position - enemyPos.position, Vector3.up));
+	//			enemyCreated.GetComponent<Renderer> ().material.color = colors [Random.Range (0, colors.Length)];
+	//			enemyCreated.tag = "Enemies";
+	//			passedTime = 0.0f;
+	//		} else {
+	//			passedTime += Time.deltaTime;
+	//		}
+	//	}
 }

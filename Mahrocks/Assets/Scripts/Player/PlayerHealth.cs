@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerHealth : MonoBehaviour {
+public class PlayerHealth : MonoBehaviour
+{
 
 	public int startingHealth = 100;
 	public Slider healthSlider;
@@ -11,32 +12,39 @@ public class PlayerHealth : MonoBehaviour {
 	public RawImage deathImage;
 	public float flashSpeed = 5.0f;
 	public float deathMessageSpeed = 50.0f;
-	public Color flashColour = new Color(1.0f, 0.0f, 0.0f, 0.1f);
-	public Color deathColour = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+	public Color flashColour = new Color (1.0f, 0.0f, 0.0f, 0.1f);
+	public Color deathColour = new Color (1.0f, 1.0f, 1.0f, 1.0f);
 
-	private int currentHealth = 100;
+	private int currentHealth;
 	private Animator playerAnimator;
 	private bool playerDamaged;
 	private bool playerIsDead;
 
-	void Awake () {
+	AudioSource playerAudio;
+	// Reference to the AudioSource component.
+	public AudioClip deathClip;
+	// The audio clip to play when the player dies.
+
+	void Awake ()
+	{
 		playerAnimator = GetComponent<Animator> ();
 		playerDamaged = false;
 		playerIsDead = false;
+		playerAudio = GetComponent <AudioSource> ();
+		currentHealth = startingHealth;
 	}
 
-	void Update () {
+	void Update ()
+	{
 		if (playerDamaged) {
 			damageImage.color = flashColour;
-		} 
-		else {
+		} else {
 			damageImage.color = Color.Lerp (damageImage.color, Color.clear, flashSpeed * Time.deltaTime);
 		}
 
 		if (playerIsDead) {
 			deathImage.color = Color.Lerp (deathImage.color, deathColour, deathMessageSpeed * Time.deltaTime);
-		} 
-		else {
+		} else {
 			deathImage.color = Color.clear;
 		}
 			
@@ -44,14 +52,19 @@ public class PlayerHealth : MonoBehaviour {
 	}
 
 	/* Kill Player */
-	void Die(){
+	void Die ()
+	{
+		playerAudio.clip = deathClip;
+		playerAudio.Play ();
 		playerIsDead = true;
 		playerAnimator.SetTrigger ("Die");
 	}
 
 	/* Decrease amount of health */
-	public void TakeDamage(int amount){
+	public void TakeDamage (int amount)
+	{
 		playerDamaged = true;
+		playerAudio.Play ();
 		currentHealth -= amount;
 		healthSlider.value = currentHealth;
 
@@ -61,7 +74,8 @@ public class PlayerHealth : MonoBehaviour {
 	}
 
 	/* increase amount of health */
-	public void RecoverHealth(int amount) {
+	public void RecoverHealth (int amount)
+	{
 		if (currentHealth <= 100 && !playerIsDead) {
 			currentHealth += amount;
 			if (currentHealth > 100) {
@@ -71,7 +85,8 @@ public class PlayerHealth : MonoBehaviour {
 		}
 	}
 
-	public bool isDead (){
+	public bool isDead ()
+	{
 		return playerIsDead;
 	}
 }

@@ -15,6 +15,7 @@ public class AreaEnemySpawn : MonoBehaviour
 	public float maxWait = 3.0f;
 	private float passedTime = 0.0f;
 
+	private EnemyMovement enemyMove;
 	private bool inside = false;
 	private Color[] colors = new Color[] {
 		Color.red,
@@ -25,6 +26,7 @@ public class AreaEnemySpawn : MonoBehaviour
 		Color.yellow,
 		Color.white
 	};
+
 
 	void Awake ()
 	{
@@ -69,7 +71,8 @@ public class AreaEnemySpawn : MonoBehaviour
 	{
 		inside = false;
 		foreach (GameObject g in GameObject.FindGameObjectsWithTag("PlaneEnemies")) {
-			Destroy (g);
+			enemyMove = g.GetComponent <EnemyMovement> ();
+			enemyMove.StartSinking ();
 		}
 		numEnemies = 0;
 	}
