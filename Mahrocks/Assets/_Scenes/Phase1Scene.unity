@@ -518,7 +518,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -1366,7 +1366,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -1484,8 +1484,8 @@ MonoBehaviour:
   cameraDistanceTolerance: 2
   cameraYOffset: 1
   xRotationSpeed: 40
-  yRotationSpeed: 20
-  cameraMinYAngle: -20
+  yRotationSpeed: 0
+  cameraMinYAngle: 20
   cameraMaxYAngle: 20
 --- !u!1 &1073270040
 GameObject:
@@ -1882,6 +1882,7 @@ MonoBehaviour:
   sounds:
   - {fileID: 2114173892}
   - {fileID: 530073075}
+  secondsBetweenAttacks: 0.5
 --- !u!1 &1770328970
 GameObject:
   m_ObjectHideFlags: 0
@@ -2333,7 +2334,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
