@@ -20,17 +20,16 @@ public class PlayerHealth : MonoBehaviour
 	private bool playerDamaged;
 	private bool playerIsDead;
 
-	AudioSource playerAudio;
 	// Reference to the AudioSource component.
-	public AudioClip deathClip;
-	// The audio clip to play when the player dies.
+	public AudioSource playerDeathSound;
+	public AudioSource playerTakeDamageSound;
+	public AudioSource playerRecoverHealthSound;
 
 	void Awake ()
 	{
 		playerAnimator = GetComponent<Animator> ();
 		playerDamaged = false;
 		playerIsDead = false;
-		playerAudio = GetComponent <AudioSource> ();
 		currentHealth = startingHealth;
 	}
 
@@ -52,10 +51,9 @@ public class PlayerHealth : MonoBehaviour
 	}
 
 	/* Kill Player */
-	void Die ()
+	public void Die ()
 	{
-		playerAudio.clip = deathClip;
-		playerAudio.Play ();
+		playerDeathSound.Play ();
 		playerIsDead = true;
 		playerAnimator.SetTrigger ("Die");
 	}
@@ -64,7 +62,7 @@ public class PlayerHealth : MonoBehaviour
 	public void TakeDamage (int amount)
 	{
 		playerDamaged = true;
-		playerAudio.Play ();
+		playerTakeDamageSound.Play ();
 		currentHealth -= amount;
 		healthSlider.value = currentHealth;
 
@@ -76,6 +74,7 @@ public class PlayerHealth : MonoBehaviour
 	/* increase amount of health */
 	public void RecoverHealth (int amount)
 	{
+		playerRecoverHealthSound.Play ();
 		if (currentHealth <= 100 && !playerIsDead) {
 			currentHealth += amount;
 			if (currentHealth > 100) {
