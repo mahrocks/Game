@@ -8,6 +8,7 @@ public class PlayerThirst : MonoBehaviour {
 	public int startingBeer = 100;
 	public Slider beerSlider;
 	public RawImage thirstImage;
+	public AudioSource playerThirstSound;
 
 	public float secondsBetweenThirstDrops = 1.0f;
 	public int thirstAmountToLose = 1;
@@ -17,11 +18,11 @@ public class PlayerThirst : MonoBehaviour {
 	private PlayerHealth player;
 	private float timer;
 
-	public Color thirstTier1Colour = new Color (1.0f, 1.0f, 0.0f, 0.3f);
-	public Color thirstTier2Colour = new Color (1.0f, 1.0f, 0.0f, 0.6f);
+	public Color thirstLevel1Colour = new Color (1.0f, 1.0f, 0.0f, 0.3f);
+	public Color thirstLevel2Colour = new Color (1.0f, 1.0f, 0.0f, 0.6f);
 
-
-	//AudioSource playerThirstSound;
+	private uint currentThirstLevel;
+	private uint previousThirstLevel;
 
 	void Awake () {
 		player = GetComponent <PlayerHealth> ();
@@ -31,11 +32,14 @@ public class PlayerThirst : MonoBehaviour {
 	{
 		timer = 0.0f;
 		currentBeer = startingBeer;
+
+		currentThirstLevel = 0;
+		previousThirstLevel = 0;
 	}
 
 	void Update () {
 		timer += Time.deltaTime;
-		if (timer >= secondsBetweenThirstDrops) {
+		if (timer >= secondsBetweenThirstDrops && !player.isDead()) {
 			timer = 0.0f;
 			LoseBeer(thirstAmountToLose);
 		}
@@ -44,9 +48,6 @@ public class PlayerThirst : MonoBehaviour {
 	private void LoseBeer (int amount) {
 		currentBeer -= amount;
 		beerSlider.value = currentBeer;
-		if (currentBeer <= 0 && !player.isDead()) {
-			player.Die ();
-		}
 		CheckThirstLevel ();
 	}
 
@@ -59,12 +60,30 @@ public class PlayerThirst : MonoBehaviour {
 	}
 
 	private void CheckThirstLevel () {
+		previousThirstLevel = currentThirstLevel;
+
+		// change thirst image
 		if (currentBeer >= 66) {
+			currentThirstLevel = 0;
 			thirstImage.color = Color.clear;
 		} else if (currentBeer >= 33) {
-			thirstImage.color = thirstTier1Colour;
+			currentThirstLevel = 1;
+			thirstImage.color = thirstLevel1Colour;
 		} else {
-			thirstImage.color = thirstTier2Colour;
+			currentThirstLevel = 2;
+			thirstImage.color = thirstLevel2Colour;
 		}
+
+		// play Sound
+		if (currentThirstLevel != previousThirstLevel) {
+			playerThirstSound.Play ();
+		}
+
+		// kill Player
+		if (currentBeer <= 0 && !player.isDead()) {
+			thirstImage.color = Color.clear;
+			player.Die ();
+		}
+
 	}
 }
