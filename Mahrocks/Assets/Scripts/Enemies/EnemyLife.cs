@@ -13,12 +13,55 @@ public class EnemyLife : MonoBehaviour
 	public AudioClip deathClip;
 	// The sound to play when the enemy dies.
 
+
+	public ParticleSystem blood;
+
+
+
+
+
+
 	AudioSource enemyAudio;
 	// Reference to the audio source.
 	BoxCollider boxCollider;
 	// Reference to the capsule collider.
+
 	public bool isDead;
-	// Whether the enemy is dead.
+	public bool isFading;
+
+	void Start(){
+		currentHealth = startingHealth;
+		isDead = false;
+		isFading = false;
+	}
+
+	void OnCollisionEnter(Collision col) 
+	{
+		if (col.gameObject.CompareTag ("Bullet"))
+		{
+			Destroy (col.gameObject);
+			if (!isDead) {
+				currentHealth--;
+				if (!blood.isPlaying) {
+					blood.Play ();
+				}
+				if (currentHealth == 0) {
+					isDead = true;
+				}
+			}
+		}
+	}
+
+	void Update(){
+		if (isDead) {
+			blood.Pause ();
+			blood.Play ();
+			gameObject.GetComponent<EnemyMovement> ().StartSinking ();
+		}
+	}
+
+
+
 	/*
 	public void TakeDamage (int amount)
 	{

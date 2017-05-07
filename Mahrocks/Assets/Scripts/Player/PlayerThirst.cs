@@ -9,10 +9,13 @@ public class PlayerThirst : MonoBehaviour {
 	public Slider beerSlider;
 	public RawImage thirstImage;
 	public AudioSource playerThirstSound;
+	public AudioSource playerBurpSound;
+
 
 	public float secondsBetweenThirstDrops = 1.0f;
 	public int thirstAmountToLose = 1;
 	public float thirstTierChangeSpeed = 2.0f;
+
 
 	private int currentBeer;
 	private PlayerHealth player;
@@ -23,6 +26,7 @@ public class PlayerThirst : MonoBehaviour {
 
 	private uint currentThirstLevel;
 	private uint previousThirstLevel;
+
 
 	void Awake () {
 		player = GetComponent <PlayerHealth> ();
@@ -42,6 +46,17 @@ public class PlayerThirst : MonoBehaviour {
 		if (timer >= secondsBetweenThirstDrops && !player.isDead()) {
 			timer = 0.0f;
 			LoseBeer(thirstAmountToLose);
+		}
+	}
+
+	void OnTriggerEnter(Collider other) 
+	{
+		if (other.gameObject.CompareTag ("Chopp"))
+		{
+			Destroy (other.gameObject);
+			RecoverBeer (Random.Range (5 , 15));
+			playerBurpSound.Play ();
+
 		}
 	}
 

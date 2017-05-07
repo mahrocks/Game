@@ -6,6 +6,8 @@ TagManager:
   tags:
   - PlaneEnemies
   - Enemies
+  - Chopp
+  - Bullet
   layers:
   - Default
   - TransparentFX
