@@ -8,6 +8,7 @@ TagManager:
   - Enemies
   - Chopp
   - Bullet
+  - Instrument
   layers:
   - Default
   - TransparentFX
