@@ -1,8 +1,8 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Player\PlayerThirst.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Enemies\GlobalEnemySpawn.cs">
     <Files>
-      <File FileName="Assets\Scripts\Player\PlayerScore.cs" Line="74" Column="20" />
+      <File FileName="Assets\Scripts\Player\PlayerScore.cs" Line="44" Column="1" />
       <File FileName="Assets\Scripts\Player\PlayerHealth.cs" Line="32" Column="3" />
       <File FileName="Assets\Scripts\Pickables\InstrumentBehavior.cs" Line="11" Column="62" />
       <File FileName="Assets\Scripts\Player\PlayerThirst.cs" Line="51" Column="82" />
