@@ -46,16 +46,20 @@ public class AreaEnemySpawn : MonoBehaviour
 				if (passedTime < maxWait && passedTime > minWait) { //Between 1 and 3 seconds
 
 					if (Random.Range (0.0f, 1.0f) >= 0.5f) { // Has 50% of spawning
-						GameObject enemyCreated = Instantiate (enemy, new Vector3 ((numEnemies * 2.0f + 168.0f), 0.5f, 69f), Quaternion.LookRotation (player.transform.position - enemyPos.position, Vector3.up));
+						GameObject enemyCreated = Instantiate (enemy, new Vector3 ((numEnemies * 2.0f + 168.0f), -0.5f, 55f), Quaternion.LookRotation (player.transform.position - enemyPos.position, Vector3.up));
 						enemyCreated.GetComponent<Renderer> ().material.color = colors [Random.Range (0, colors.Length)];
 						passedTime = 0.0f;
+						enemyMove = enemyCreated.GetComponent <EnemyMovement> ();
+						enemyMove.StartEmerging ();
 						numEnemies++;
 					}
 				} else {
 					if (passedTime > maxWait) { // Above 3s, spawn right away
-						GameObject enemyCreated = Instantiate (enemy, new Vector3 ((numEnemies * 2.0f + 168.0f), 0.5f, 69f), Quaternion.LookRotation (player.transform.position - enemyPos.position, Vector3.up));
+						GameObject enemyCreated = Instantiate (enemy, new Vector3 ((numEnemies * 2.0f + 168.0f), -0.5f, 55f), Quaternion.LookRotation (player.transform.position - enemyPos.position, Vector3.up));
 						enemyCreated.GetComponent<Renderer> ().material.color = colors [Random.Range (0, colors.Length)];
 						passedTime = 0.0f;
+						enemyMove = enemyCreated.GetComponent <EnemyMovement> ();
+						enemyMove.StartEmerging ();
 						numEnemies++;
 
 					} else { //Or just add the time

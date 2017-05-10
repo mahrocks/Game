@@ -70,4 +70,8 @@ public class PlayerScore : MonoBehaviour {
 		playerVictorySound.Play ();
 		victoryImage.color = new Color (1.0f, 1.0f, 1.0f, 1.0f);
 	}
+
+	public bool haveWon(){
+		return playerWon;
+	}
 }

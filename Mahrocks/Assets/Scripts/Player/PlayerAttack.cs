@@ -10,22 +10,22 @@ public class PlayerAttack : MonoBehaviour
 
 	private GameObject playerObject;
 	private GameObject enemyObject;
-	private PlayerHealth player;
+	//private PlayerHealth player;
 	private EnemyLife enemy;
-	private bool enemyInRange;
+	//private bool enemyInRange;
 
-	private BoxCollider attackCollider;
+	//private BoxCollider attackCollider;
 	private float timer;
 
 	// Use this for initialization
 	void Awake ()
 	{
-		playerObject = GameObject.FindGameObjectWithTag ("Player");
-		player = playerObject.GetComponent <PlayerHealth> ();
+		//playerObject = GameObject.FindGameObjectWithTag ("Player");
+		//player = playerObject.GetComponent <PlayerHealth> ();
 
 		//enemyAnimator = GetComponent <Animator> ();
 
-		attackCollider = GetComponent <BoxCollider> ();
+		//attackCollider = GetComponent <BoxCollider> ();
 	}
 	
 	// Update is called once per frame
@@ -34,20 +34,20 @@ public class PlayerAttack : MonoBehaviour
 		
 	}
 
-	void OnTriggerEnter (Collider other)
+	/*void OnTriggerEnter (Collider other)
 	{
 		if (other.gameObject == playerObject) {
 			enemyInRange = true;
 		}
 	}
 
-	/* called when an object exits attack range collider */
+	// called when an object exits attack range collider 
 	void OnTriggerExit (Collider other)
 	{
 		if (other.gameObject == playerObject) {
 			enemyInRange = false;
 		}
-	}
+	} */
 
 	/*void Attack ()
 	{

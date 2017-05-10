@@ -25,6 +25,15 @@ public class PlayerHealth : MonoBehaviour
 	public AudioSource playerTakeDamageSound;
 	public AudioSource playerRecoverHealthSound;
 
+	private GameObject playerObject;
+	private PlayerScore pscore;
+
+	void Start ()
+	{
+		playerObject = GameObject.FindGameObjectWithTag ("Player");
+		pscore = playerObject.GetComponent <PlayerScore> ();
+	}
+
 	void Awake ()
 	{
 		playerAnimator = GetComponent<Animator> ();
@@ -35,19 +44,21 @@ public class PlayerHealth : MonoBehaviour
 
 	void Update ()
 	{
-		if (playerDamaged) {
-			damageImage.color = flashColour;
-		} else {
-			damageImage.color = Color.Lerp (damageImage.color, Color.clear, flashSpeed * Time.deltaTime);
-		}
+		if (!pscore.haveWon()) {
+			if (playerDamaged) {
+				damageImage.color = flashColour;
+			} else {
+				damageImage.color = Color.Lerp (damageImage.color, Color.clear, flashSpeed * Time.deltaTime);
+			}
 
-		if (playerIsDead) {
-			deathImage.color = Color.Lerp (deathImage.color, deathColour, deathMessageSpeed * Time.deltaTime);
-		} else {
-			deathImage.color = Color.clear;
-		}
+			if (playerIsDead) {
+				deathImage.color = Color.Lerp (deathImage.color, deathColour, deathMessageSpeed * Time.deltaTime);
+			} else {
+				deathImage.color = Color.clear;
+			}
 			
-		playerDamaged = false;
+			playerDamaged = false;
+		}
 	}
 
 	/* Kill Player */
@@ -61,26 +72,30 @@ public class PlayerHealth : MonoBehaviour
 	/* Decrease amount of health */
 	public void TakeDamage (int amount)
 	{
-		playerDamaged = true;
-		playerTakeDamageSound.Play ();
-		currentHealth -= amount;
-		healthSlider.value = currentHealth;
+		if (!pscore.haveWon ()) { 
+			playerDamaged = true;
+			playerTakeDamageSound.Play ();
+			currentHealth -= amount;
+			healthSlider.value = currentHealth;
 
-		if (currentHealth <= 0 && !playerIsDead) {
-			Die ();
+			if (currentHealth <= 0 && !playerIsDead) {
+				Die ();
+			}
 		}
 	}
 
 	/* increase amount of health */
 	public void RecoverHealth (int amount)
 	{
-		playerRecoverHealthSound.Play ();
-		if (currentHealth <= 100 && !playerIsDead) {
-			currentHealth += amount;
-			if (currentHealth > 100) {
-				currentHealth = 100;
+		if (!pscore.haveWon ()) {
+			playerRecoverHealthSound.Play ();
+			if (currentHealth <= 100 && !playerIsDead) {
+				currentHealth += amount;
+				if (currentHealth > 100) {
+					currentHealth = 100;
+				}
+				healthSlider.value = currentHealth;
 			}
-			healthSlider.value = currentHealth;
 		}
 	}
 

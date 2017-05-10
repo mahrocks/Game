@@ -27,6 +27,9 @@ public class PlayerThirst : MonoBehaviour {
 	private uint currentThirstLevel;
 	private uint previousThirstLevel;
 
+	private GameObject playerObject;
+	private PlayerScore pscore;
+
 
 	void Awake () {
 		player = GetComponent <PlayerHealth> ();
@@ -39,11 +42,13 @@ public class PlayerThirst : MonoBehaviour {
 
 		currentThirstLevel = 0;
 		previousThirstLevel = 0;
+		playerObject = GameObject.FindGameObjectWithTag ("Player");
+		pscore = playerObject.GetComponent <PlayerScore> ();
 	}
 
 	void Update () {
 		timer += Time.deltaTime;
-		if (timer >= secondsBetweenThirstDrops && !player.isDead()) {
+		if (timer >= secondsBetweenThirstDrops && !player.isDead() && !pscore.haveWon()) {
 			timer = 0.0f;
 			LoseBeer(thirstAmountToLose);
 		}
@@ -68,7 +73,7 @@ public class PlayerThirst : MonoBehaviour {
 
 	public void RecoverBeer (int amount) {
 		currentBeer += amount;
-		if (currentBeer > 100 && !player.isDead()) {
+		if (currentBeer > 100) {
 			currentBeer = 100;
 		}
 		beerSlider.value = currentBeer;
@@ -95,7 +100,7 @@ public class PlayerThirst : MonoBehaviour {
 		}
 
 		// kill Player
-		if (currentBeer <= 0 && !player.isDead()) {
+		if (currentBeer <= 0 && !player.isDead() && !pscore.haveWon()) {
 			thirstImage.color = Color.clear;
 			player.Die ();
 		}

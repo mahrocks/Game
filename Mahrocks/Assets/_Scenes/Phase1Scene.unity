@@ -1517,7 +1517,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1045212385}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 60da70a36671f0a4981862eb66167de5, type: 3}
   m_Name: 
@@ -2599,7 +2599,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4314521458360786, guid: 5396f03348098d242862d346ff106d81, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 163.16
+      value: 163.11
       objectReference: {fileID: 0}
     - target: {fileID: 4314521458360786, guid: 5396f03348098d242862d346ff106d81, type: 2}
       propertyPath: m_LocalPosition.y
@@ -3246,9 +3246,9 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 0.336102
-  m_Direction: 1
+  m_Radius: 0.51
+  m_Height: 1.03
+  m_Direction: 0
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &2018161531
 MeshFilter:

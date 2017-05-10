@@ -6,6 +6,7 @@ public class EnemyMovement : MonoBehaviour
 {
 
 	public bool isSinking;
+	public bool isEmerging;
 	Transform tr_Player;
 	public float sinkSpeed = 2.5f;
 	// The speed at which the enemy sinks through the floor when dead.
@@ -25,7 +26,14 @@ public class EnemyMovement : MonoBehaviour
 			// ... move the enemy down by the sinkSpeed per second.
 			transform.Translate (-Vector3.up * sinkSpeed * Time.deltaTime);
 			//return;
-		} else {
+		} else if (isEmerging) {
+			transform.Translate (Vector3.up * sinkSpeed * Time.deltaTime);
+			if (transform.position.y >= 0.5f) {
+				transform.position = new Vector3 (transform.position.x, 0.5f, transform.position.z);
+				isEmerging = false;
+				GetComponent <Rigidbody> ().isKinematic = false;
+			}
+		}else{
 			/* Look at Player*/
 			transform.rotation = Quaternion.Slerp (transform.rotation, Quaternion.LookRotation (tr_Player.position - transform.position), f_RotSpeed * Time.deltaTime);
 
@@ -50,6 +58,22 @@ public class EnemyMovement : MonoBehaviour
 
 		// After 2 seconds destory the enemy.
 		Destroy (gameObject, 3f);
+	}
+
+	public void StartEmerging ()
+	{
+		// Find and disable the Nav Mesh Agent.
+		//GetComponent <NavMeshAgent> ().enabled = false;
+
+		// Find the rigidbody component and make it kinematic (since we use Translate to sink the enemy).
+		GetComponent <Rigidbody> ().isKinematic = true;
+
+		// The enemy should no sink.
+		isEmerging = true;
+
+		// Increase the score by the enemy's score value.
+		//ScoreManager.score += scoreValue;
+
 	}
 }
 
