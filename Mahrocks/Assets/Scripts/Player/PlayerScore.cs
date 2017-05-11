@@ -49,7 +49,7 @@ public class PlayerScore : MonoBehaviour
 	{
 		if (other.gameObject.CompareTag ("Instrument")) {
 			Destroy (other.gameObject);
-			incremetCollectedInstruments ();
+			incrementCollectedInstruments ();
 			increasePickedUpInstruments ();
 			collectInstrumentSound.Play ();
 		}
@@ -69,7 +69,7 @@ public class PlayerScore : MonoBehaviour
 	}
 
 	// Called every time an instrument is picked up
-	public void incremetCollectedInstruments ()
+	public void incrementCollectedInstruments ()
 	{
 		collectedInstruments++;
 		if (collectedInstruments == instrumentQuantity) {
