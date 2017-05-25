@@ -33,6 +33,9 @@ public class PlayerCamera : MonoBehaviour {
     private const float correctionFactor = 0.02f;
 
     void Start () {
+		Cursor.visible = false;
+
+
 		playerTransform = playerObject.transform;
 		player = playerObject.GetComponent <PlayerHealth> ();
 
