@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GlobalEnemySpawn : MonoBehaviour {
+public class GlobalEnemySpawn : MonoBehaviour
+{
 
-	public float spawnTime = 5.0f;
+	private float spawnTime = 5.0f;
 
 	public GameObject enemy;
 	public Transform playerPos;
@@ -23,7 +24,8 @@ public class GlobalEnemySpawn : MonoBehaviour {
 	};
 
 	// Use this for initialization
-	void Start () {
+	void Start ()
+	{
 		passedTime = 0.0f;
 	}
 
@@ -44,5 +46,10 @@ public class GlobalEnemySpawn : MonoBehaviour {
 		} else {
 			passedTime += Time.deltaTime;
 		}
+	}
+
+	public void reduceTime ()
+	{
+		spawnTime -= 0.5f;
 	}
 }

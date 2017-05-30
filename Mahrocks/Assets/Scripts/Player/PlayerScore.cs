@@ -18,7 +18,8 @@ public class PlayerScore : MonoBehaviour
 	public Text instrumentsPickedup;
 	public Text timePassed;
 
-
+	public GlobalEnemySpawn gespawn;
+	//public GameObject gamespawner;
 	public RawImage victoryImage;
 
 	// Use this for initialization
@@ -31,6 +32,8 @@ public class PlayerScore : MonoBehaviour
 
 	void Start ()
 	{
+		//gespawn = (GlobalEnemySpawn)gamespawner.GetComponent (typeof(GlobalEnemySpawn));
+		gespawn = GameObject.FindObjectOfType (typeof(GlobalEnemySpawn)) as GlobalEnemySpawn;
 		playerWon = false;
 		victoryImage.color = Color.clear;
 		instrumentsPickedup.text = "Instrumentos Recuperados: <color=#ffbf00> 0</color>";
@@ -52,6 +55,7 @@ public class PlayerScore : MonoBehaviour
 			incrementCollectedInstruments ();
 			increasePickedUpInstruments ();
 			collectInstrumentSound.Play ();
+			gespawn.reduceTime ();
 		}
 	}
 

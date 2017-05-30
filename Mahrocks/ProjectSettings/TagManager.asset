@@ -4,11 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - PlaneEnemies
   - Enemies
   - Chopp
   - Bullet
   - Instrument
+  - AreaEnemies
   layers:
   - Default
   - TransparentFX
