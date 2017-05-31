@@ -33,7 +33,7 @@ public class AreaEnemySpawn : MonoBehaviour
 		player = GameObject.FindGameObjectWithTag ("Player");
 	}
 
-	void OnTriggerStay (Collider other)
+	void OnTriggerStay(Collider other)
 	{
 		if (other.gameObject.tag == "Player") {
 			if (inside == false) {
@@ -74,12 +74,14 @@ public class AreaEnemySpawn : MonoBehaviour
 
 	void OnTriggerExit (Collider other)
 	{
-		inside = false;
-		foreach (GameObject g in GameObject.FindGameObjectsWithTag("AreaEnemies")) {
-			enemyMove = g.GetComponent <EnemyMovement> ();
-			enemyMove.StartSinking ();
+		if (other.gameObject.tag == "Player") {
+			inside = false;
+			foreach (GameObject g in GameObject.FindGameObjectsWithTag("AreaEnemies")) {
+				enemyMove = g.GetComponent <EnemyMovement> ();
+				enemyMove.StartSinking ();
+			}
+			numEnemies = 0;
 		}
-		numEnemies = 0;
 	}
 	
 

@@ -6,10 +6,11 @@ public class BlulletSpawner : MonoBehaviour {
 
 	public GameObject[] bullets;
 	public Transform spawnPos;
-	public AudioSource[] sounds;
+	public AudioSource sound;
 	public float secondsBetweenAttacks = 1.0f;
-
+	public AudioClip[] sounds;
 	private float passedTime;
+	private int playingNow = 0;
 
 	void Start(){
 		passedTime = 0.0f;
@@ -20,17 +21,22 @@ public class BlulletSpawner : MonoBehaviour {
 		passedTime += Time.deltaTime;
 	
 		if (Input.GetButtonDown("Fire1") && (passedTime > secondsBetweenAttacks)) {
-			//if (!sounds[0].isPlaying && !sounds[1].isPlaying) {
+
+			sound.clip = sounds [playingNow];
 
 			passedTime = 0.0f;
 			GameObject bullet = bullets [Random.Range (0, bullets.Length)];
 			bullet = (GameObject)Instantiate (bullet, spawnPos.position, spawnPos.transform.rotation);
-			sounds [Random.Range (0, sounds.Length)].Play ();
+			sound.Play ();
 			bullet.GetComponent<Rigidbody> ().velocity = bullet.transform.forward * 30;
 
-			// Destroy the bullet after 2 seconds
+			if (playingNow == sounds.Length - 1) {
+				playingNow = 0;
+			}else{
+				playingNow++;
+			}
+
 			Destroy (bullet, 2.0f); 
-			//}
 		}
 	}
 }
