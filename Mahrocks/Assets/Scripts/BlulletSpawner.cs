@@ -11,6 +11,7 @@ public class BlulletSpawner : MonoBehaviour {
 	public AudioClip[] sounds;
 	private float passedTime;
 	private int playingNow = 0;
+	private float lastShoot = 0.0f;
 
 	void Start(){
 		passedTime = 0.0f;
@@ -19,8 +20,13 @@ public class BlulletSpawner : MonoBehaviour {
 	void Update() {
 
 		passedTime += Time.deltaTime;
-	
+
+		if (lastShoot > 2.5f) {
+			playingNow = 0;
+		}
+		
 		if (Input.GetButtonDown("Fire1") && (passedTime > secondsBetweenAttacks)) {
+			lastShoot = 0.0f;
 
 			sound.clip = sounds [playingNow];
 
@@ -38,5 +44,7 @@ public class BlulletSpawner : MonoBehaviour {
 
 			Destroy (bullet, 2.0f); 
 		}
+
+		lastShoot += Time.deltaTime;
 	}
 }
