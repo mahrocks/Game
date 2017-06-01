@@ -244,3 +244,7 @@ ModelManifest.xml
 *.dll
 *.dll
 *.bin
+
+#Keep only Assets Folder
+Mahrocks/*
+!Mahrocks/Assets/*
