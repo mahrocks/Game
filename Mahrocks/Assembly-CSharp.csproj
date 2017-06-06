@@ -50,6 +50,8 @@
      <Compile Include="Assets\Scripts\BulletBehaviour.cs" />
      <Compile Include="Assets\Scripts\ButtonManager.cs" />
      <Compile Include="Assets\Scripts\Camera\PlayerCamera.cs" />
+     <Compile Include="Assets\Scripts\Camera\SunIntensity.cs" />
+     <Compile Include="Assets\Scripts\Camera\SunLight.cs" />
      <Compile Include="Assets\Scripts\Camera\_DEPRECATED_CameraYawnScript.cs" />
      <Compile Include="Assets\Scripts\Enemies\AreaEnemySpawn.cs" />
      <Compile Include="Assets\Scripts\Enemies\EnemyAttack.cs" />
