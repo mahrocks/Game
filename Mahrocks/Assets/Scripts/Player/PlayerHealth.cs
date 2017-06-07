@@ -24,6 +24,7 @@ public class PlayerHealth : MonoBehaviour
 	public AudioSource playerDeathSound;
 	public AudioSource playerTakeDamageSound;
 	public AudioSource playerRecoverHealthSound;
+	private MusicController bgMusic;
 
 	private GameObject playerObject;
 	private PlayerScore pscore;
@@ -32,6 +33,7 @@ public class PlayerHealth : MonoBehaviour
 	{
 		playerObject = GameObject.FindGameObjectWithTag ("Player");
 		pscore = playerObject.GetComponent <PlayerScore> ();
+		bgMusic = GameObject.FindGameObjectWithTag ("BgMusic").GetComponent<MusicController>();
 	}
 
 	void Awake ()
@@ -64,6 +66,7 @@ public class PlayerHealth : MonoBehaviour
 	/* Kill Player */
 	public void Die ()
 	{
+		bgMusic.Stop ();
 		playerDeathSound.Play ();
 		playerIsDead = true;
 		playerAnimator.SetTrigger ("Die");
