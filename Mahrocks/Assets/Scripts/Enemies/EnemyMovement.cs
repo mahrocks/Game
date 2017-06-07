@@ -15,7 +15,6 @@ public class EnemyMovement : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-
 		tr_Player = GameObject.FindGameObjectWithTag ("Player").transform;
 	}
 

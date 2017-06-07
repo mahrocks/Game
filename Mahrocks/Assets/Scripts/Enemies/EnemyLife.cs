@@ -16,11 +16,6 @@ public class EnemyLife : MonoBehaviour
 
 	public ParticleSystem blood;
 
-
-
-
-
-
 	AudioSource enemyAudio;
 	// Reference to the audio source.
 	BoxCollider boxCollider;
@@ -29,10 +24,13 @@ public class EnemyLife : MonoBehaviour
 	public bool isDead;
 	public bool isFading;
 
+	private AreaEnemySpawn parentSpawnArea;
+
 	void Start(){
 		currentHealth = startingHealth;
 		isDead = false;
 		isFading = false;
+		parentSpawnArea = GetComponentInParent <AreaEnemySpawn> ();
 	}
 
 	void OnCollisionEnter(Collision col) 
@@ -46,20 +44,36 @@ public class EnemyLife : MonoBehaviour
 					blood.Play ();
 				}
 				if (currentHealth == 0) {
-					isDead = true;
+					Die();
 				}
 			}
 		}
 	}
 
-	void Update(){
+	/*void Update(){
 		if (isDead) {
 			blood.Pause ();
 			blood.Play ();
+			if (this.gameObject.tag == "AreaEnemies") {
+				parentSpawnArea.increaseAreaEnemiesKilled ();
+				parentSpawnArea.decreaseNumEnemies ();
+			}
+			gameObject.GetComponent<EnemyMovement> ().StartSinking ();
+		}
+	}*/
+
+	void Die ()
+	{
+		if (!isDead) {
+			isDead = true;
+			blood.Pause ();
+			blood.Play ();
+			if (this.gameObject.tag == "AreaEnemies") {
+				parentSpawnArea.increaseAreaEnemiesKilled ();
+			}
 			gameObject.GetComponent<EnemyMovement> ().StartSinking ();
 		}
 	}
-
 
 
 	/*

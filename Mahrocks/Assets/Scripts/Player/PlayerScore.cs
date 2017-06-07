@@ -50,7 +50,7 @@ public class PlayerScore : MonoBehaviour
 		}
 	}
 
-	private void OnTriggerEnter (Collider other)
+	/*private void OnTriggerEnter (Collider other)
 	{
 		if (other.gameObject.CompareTag ("Instrument")) {
 			Destroy (other.gameObject);
@@ -59,7 +59,7 @@ public class PlayerScore : MonoBehaviour
 			collectInstrumentSound.Play ();
 			gespawn.reduceTime ();
 		}
-	}
+	}*/
 
 	// When an instrument is created, it calls this method to indicate it exists.
 	// This method must be called by other scripts ONLY on Start(). If it is called on Awake(),
@@ -78,6 +78,9 @@ public class PlayerScore : MonoBehaviour
 	public void incrementCollectedInstruments ()
 	{
 		collectedInstruments++;
+		collectInstrumentSound.Play ();
+		gespawn.reduceTime ();
+		instrumentsPickedup.text = "Instrumentos Recuperados: <color=#ffbf00>" + collectedInstruments.ToString () + "</color>";
 		/*if (collectedInstruments == instrumentQuantity) {
 			win ();
 		}*/
@@ -105,10 +108,10 @@ public class PlayerScore : MonoBehaviour
 		return playerWon;
 	}
 
-	public void increasePickedUpInstruments ()
+	/*public void increasePickedUpInstruments ()
 	{
 		instrumentsPickedup.text = "Instrumentos Recuperados: <color=#ffbf00>" + collectedInstruments.ToString () + "</color>";
-	}
+	}*/
 
 	public void increaseTimer ()
 	{

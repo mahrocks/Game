@@ -7,7 +7,6 @@ public class AreaEnemySpawn : MonoBehaviour
 	public GameObject enemy;
 	public GameObject player;
 	public Transform enemyPos;
-	public int numEnemies = 0;
 	public int maxEnemies = 5;
 
 	//private float repeatRate = 1.5f;
@@ -17,52 +16,36 @@ public class AreaEnemySpawn : MonoBehaviour
 
 	private EnemyMovement enemyMove;
 	private bool inside = false;
-	private Color[] colors = new Color[] {
-		Color.red,
-		Color.blue,
-		Color.black,
-		Color.green,
-		Color.gray,
-		Color.yellow,
-		Color.white
-	};
-
+	private int numEnemies = 0;
+	private int areaEnemiesKilled = 0;
+	private int enemiesLeft;
 
 	void Awake ()
 	{
 		player = GameObject.FindGameObjectWithTag ("Player");
+		enemiesLeft = maxEnemies;
 	}
 
 	void OnTriggerStay(Collider other)
 	{
 		if (other.gameObject.tag == "Player") {
-			if (inside == false) {
+			/*if (inside == false) {
 				inside = true;
 				foreach (GameObject g in GameObject.FindGameObjectsWithTag("AreaEnemies")) {
 					numEnemies++;
 				}
-			}
-			if (numEnemies < maxEnemies) {
+			}*/
+			if (numEnemies < enemiesLeft) {
 				if (passedTime < maxWait && passedTime > minWait) { //Between 1 and 3 seconds
 
-					if (Random.Range (0.0f, 1.0f) >= 0.5f) { // Has 50% of spawning
-						GameObject enemyCreated = Instantiate (enemy, new Vector3 ((numEnemies * 2.0f + other.transform.position.x), -0.5f, other.transform.position.z), Quaternion.LookRotation (player.transform.position - enemyPos.position, Vector3.up));
-						enemyCreated.GetComponent<Renderer> ().material.color = colors [Random.Range (0, colors.Length)];
-						enemyCreated.tag = "AreaEnemies";
+					if (Random.Range (0.0f, 1.0f) >= 0.5f) { // Has 50% chance of spawning
+						spawnNewEnemy (other);
 						passedTime = 0.0f;
-						enemyMove = enemyCreated.GetComponent <EnemyMovement> ();
-						enemyMove.StartEmerging ();
-						numEnemies++;
 					}
 				} else {
 					if (passedTime > maxWait) { // Above 3s, spawn right away
-						GameObject enemyCreated = Instantiate (enemy, new Vector3 ((numEnemies * 2.0f + other.transform.position.x), -0.5f, other.transform.position.z), Quaternion.LookRotation (player.transform.position - enemyPos.position, Vector3.up));
-						enemyCreated.GetComponent<Renderer> ().material.color = colors [Random.Range (0, colors.Length)];
-						enemyCreated.tag = "AreaEnemies";
+						spawnNewEnemy (other);
 						passedTime = 0.0f;
-						enemyMove = enemyCreated.GetComponent <EnemyMovement> ();
-						enemyMove.StartEmerging ();
-						numEnemies++;
 
 					} else { //Or just add the time
 						passedTime += Time.deltaTime;
@@ -83,6 +66,34 @@ public class AreaEnemySpawn : MonoBehaviour
 			numEnemies = 0;
 		}
 	}
-	
+
+	private void spawnNewEnemy(Collider spawnAreaCollider){
+		GameObject enemyCreated = Instantiate (enemy, 
+											   new Vector3 ((numEnemies * 2.0f + spawnAreaCollider.transform.position.x), -0.5f, spawnAreaCollider.transform.position.z), 
+											   Quaternion.LookRotation (player.transform.position - enemyPos.position, Vector3.up));
+		enemyCreated.tag = "AreaEnemies";
+		enemyCreated.transform.parent = this.gameObject.transform;
+		enemyMove = enemyCreated.GetComponent <EnemyMovement> ();
+		enemyMove.StartEmerging ();
+		numEnemies++;
+	}
+
+	public int getAreaMaxEnemies() {
+		return maxEnemies;
+	}
+
+	public int getAreaEnemiesKilled() {
+		return areaEnemiesKilled;
+	}
+
+	public int getEnemiesLeft (){
+		return enemiesLeft;
+	}
+
+	public void increaseAreaEnemiesKilled() {
+		areaEnemiesKilled++;
+		enemiesLeft--;
+		numEnemies--;
+	}
 
 }
