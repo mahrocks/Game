@@ -14,6 +14,7 @@ public class PlayerScore : MonoBehaviour
 
 	public AudioSource collectInstrumentSound;
 	public AudioSource playerVictorySound;
+	private MusicController bgMusic;
 
 	public Text instrumentsPickedup;
 	public Text timePassed;
@@ -34,6 +35,7 @@ public class PlayerScore : MonoBehaviour
 	{
 		//gespawn = (GlobalEnemySpawn)gamespawner.GetComponent (typeof(GlobalEnemySpawn));
 		gespawn = GameObject.FindObjectOfType (typeof(GlobalEnemySpawn)) as GlobalEnemySpawn;
+		bgMusic = GameObject.FindGameObjectWithTag ("BgMusic").GetComponent<MusicController>();
 		playerWon = false;
 		victoryImage.color = Color.clear;
 		instrumentsPickedup.text = "Instrumentos Recuperados: <color=#ffbf00> 0</color>";
@@ -76,9 +78,9 @@ public class PlayerScore : MonoBehaviour
 	public void incrementCollectedInstruments ()
 	{
 		collectedInstruments++;
-		if (collectedInstruments == instrumentQuantity) {
+		/*if (collectedInstruments == instrumentQuantity) {
 			win ();
-		}
+		}*/
 	}
 
 	public uint getCollectedInstruments ()
@@ -86,8 +88,13 @@ public class PlayerScore : MonoBehaviour
 		return collectedInstruments;
 	}
 
+	public uint getRemainingInstruments(){
+		return instrumentQuantity - collectedInstruments;
+	}
+
 	public void win ()
 	{
+		bgMusic.Stop ();
 		playerWon = true;
 		playerVictorySound.Play ();
 		victoryImage.color = new Color (1.0f, 1.0f, 1.0f, 1.0f);

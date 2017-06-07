@@ -50,8 +50,6 @@
      <Compile Include="Assets\Scripts\BulletBehaviour.cs" />
      <Compile Include="Assets\Scripts\ButtonManager.cs" />
      <Compile Include="Assets\Scripts\Camera\PlayerCamera.cs" />
-     <Compile Include="Assets\Scripts\Camera\SunIntensity.cs" />
-     <Compile Include="Assets\Scripts\Camera\SunLight.cs" />
      <Compile Include="Assets\Scripts\Camera\_DEPRECATED_CameraYawnScript.cs" />
      <Compile Include="Assets\Scripts\Enemies\AreaEnemySpawn.cs" />
      <Compile Include="Assets\Scripts\Enemies\EnemyAttack.cs" />
@@ -59,6 +57,7 @@
      <Compile Include="Assets\Scripts\Enemies\EnemyMovement.cs" />
      <Compile Include="Assets\Scripts\Enemies\GlobalEnemySpawn.cs" />
      <Compile Include="Assets\Scripts\MusicController.cs" />
+     <Compile Include="Assets\Scripts\NextPhase.cs" />
      <Compile Include="Assets\Scripts\Pickables\ChoppController.cs" />
      <Compile Include="Assets\Scripts\Pickables\InstrumentBehavior.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerAttack.cs" />

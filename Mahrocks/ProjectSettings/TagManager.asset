@@ -9,6 +9,9 @@ TagManager:
   - Bullet
   - Instrument
   - AreaEnemies
+  - PlaneEnemies
+  - NextPhaseArea
+  - BgMusic
   layers:
   - Default
   - TransparentFX
