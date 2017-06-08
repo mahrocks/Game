@@ -115,7 +115,7 @@ public class PlayerScore : MonoBehaviour
 
 	public void increaseTimer ()
 	{
-		int minutes = (int)((Time.timeSinceLevelLoad / 60) - 1);
+		int minutes = (int)((Time.timeSinceLevelLoad / 60));
 		int seconds = (int)(Time.timeSinceLevelLoad % 60);
 		timePassed.text = "Time: <color=#ffbf00>" + minutes.ToString ("00") + ":" + seconds.ToString ("00") + "</color>";
 		//timePassed.text = "Time: <color=#ffbf00>" + Time.timeSinceLevelLoad.ToString () + "</color>";

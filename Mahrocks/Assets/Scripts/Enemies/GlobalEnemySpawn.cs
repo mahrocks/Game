@@ -5,7 +5,7 @@ using UnityEngine;
 public class GlobalEnemySpawn : MonoBehaviour
 {
 
-	private float spawnTime = 5.0f;
+	private float spawnTime = 7.0f;
 
 	public GameObject enemy;
 	public Transform playerPos;
@@ -37,7 +37,7 @@ public class GlobalEnemySpawn : MonoBehaviour
 	void spawnGlobalEnemies ()
 	{
 		if (passedTime > spawnTime) {
-			GameObject newEnemy = Instantiate (enemy, new Vector3 ((Random.Range (1, 4) * 4.0f + playerPos.position.x), -0.5f, Random.Range (1, 4) * 4.0f + playerPos.position.z), Quaternion.LookRotation (playerPos.position, Vector3.up));
+			GameObject newEnemy = Instantiate (enemy, new Vector3 ((Random.Range (4, 8) * 4.0f + playerPos.position.x), -0.1f, Random.Range (4, 8) * 4.0f + playerPos.position.z), Quaternion.LookRotation (playerPos.position, Vector3.up));
 			newEnemy.GetComponent<Renderer> ().material.color = colors [Random.Range (0, colors.Length)];
 			enemyMove = newEnemy.GetComponent <EnemyMovement> ();
 			enemyMove.StartEmerging ();

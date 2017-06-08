@@ -6,7 +6,7 @@ public class AreaEnemySpawn : MonoBehaviour
 {
 	public GameObject enemy;
 	public GameObject player;
-	public Transform enemyPos;
+	public GameObject enemyPos;
 	public int maxEnemies = 5;
 
 	//private float repeatRate = 1.5f;
@@ -39,12 +39,12 @@ public class AreaEnemySpawn : MonoBehaviour
 				if (passedTime < maxWait && passedTime > minWait) { //Between 1 and 3 seconds
 
 					if (Random.Range (0.0f, 1.0f) >= 0.5f) { // Has 50% chance of spawning
-						spawnNewEnemy (other);
+						spawnNewEnemy (enemyPos);
 						passedTime = 0.0f;
 					}
 				} else {
 					if (passedTime > maxWait) { // Above 3s, spawn right away
-						spawnNewEnemy (other);
+						spawnNewEnemy (enemyPos);
 						passedTime = 0.0f;
 
 					} else { //Or just add the time
@@ -67,10 +67,10 @@ public class AreaEnemySpawn : MonoBehaviour
 		}
 	}
 
-	private void spawnNewEnemy(Collider spawnAreaCollider){
+	private void spawnNewEnemy(GameObject spawnAreaSpawner){
 		GameObject enemyCreated = Instantiate (enemy, 
-											   new Vector3 ((numEnemies * 2.0f + spawnAreaCollider.transform.position.x), -0.5f, spawnAreaCollider.transform.position.z), 
-											   Quaternion.LookRotation (player.transform.position - enemyPos.position, Vector3.up));
+											   new Vector3 ((numEnemies * 2.0f + spawnAreaSpawner.transform.position.x), -0.5f, spawnAreaSpawner.transform.position.z), 
+											   Quaternion.LookRotation (player.transform.position - enemyPos.transform.position, Vector3.up));
 		enemyCreated.tag = "AreaEnemies";
 		enemyCreated.transform.parent = this.gameObject.transform;
 		enemyMove = enemyCreated.GetComponent <EnemyMovement> ();
