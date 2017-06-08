@@ -20,6 +20,8 @@ public class PlayerScore : MonoBehaviour
 	public Text timePassed;
 
 	public GlobalEnemySpawn gespawn;
+
+	public GameObject[] gateParts;
 	//public GameObject gamespawner;
 	public RawImage victoryImage;
 
@@ -33,6 +35,7 @@ public class PlayerScore : MonoBehaviour
 
 	void Start ()
 	{
+		
 		//gespawn = (GlobalEnemySpawn)gamespawner.GetComponent (typeof(GlobalEnemySpawn));
 		gespawn = GameObject.FindObjectOfType (typeof(GlobalEnemySpawn)) as GlobalEnemySpawn;
 		bgMusic = GameObject.FindGameObjectWithTag ("BgMusic").GetComponent<MusicController>();
@@ -81,9 +84,23 @@ public class PlayerScore : MonoBehaviour
 		collectInstrumentSound.Play ();
 		gespawn.reduceTime ();
 		instrumentsPickedup.text = "Instrumentos Recuperados: <color=#ffbf00>" + collectedInstruments.ToString () + "</color>";
-		/*if (collectedInstruments == instrumentQuantity) {
-			win ();
-		}*/
+		if (collectedInstruments == instrumentQuantity) {
+			var rotateVect = gateParts [0].transform.rotation.eulerAngles;
+			rotateVect.y = 60.0f;
+			gateParts [0].transform.rotation = Quaternion.Euler (rotateVect);
+
+			rotateVect = gateParts [1].transform.rotation.eulerAngles;
+			rotateVect.y = -60.0f;
+			gateParts [1].transform.rotation = Quaternion.Euler (rotateVect);
+
+			var positionVect = new Vector3 (2.0f, 0.0f, 5.0f);
+
+			gateParts [0].transform.position += positionVect;
+
+			positionVect = new Vector3 (-2.0f, 0.0f, 5.0f);
+
+			gateParts [1].transform.position += positionVect;
+		}
 	}
 
 	public uint getCollectedInstruments ()
