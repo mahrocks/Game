@@ -1,0 +1,1372 @@
+fileFormatVersion: 2
+guid: 18a46d23138ce7f49a2ac994510d58f2
+timeCreated: 1496922152
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Bone
+    100002: Bone_001
+    100004: Bone_002
+    100006: Bone_003
+    100008: Bone_004
+    100010: Bone_005
+    100012: Bone_006
+    100014: Bone_007
+    100016: Bone_008
+    100018: Bone_009
+    100020: Bone_010
+    100022: Bone_011
+    100024: Bone_012
+    100026: Bone_013
+    100028: Bone_014
+    100030: Bone_015
+    100032: Bone_016
+    100034: Bone_017
+    100036: Bone_018
+    100038: Bone_019
+    100040: Bone_020
+    100042: Glass
+    100044: HeadPhone
+    100046: //RootNode
+    100048: Player
+    100050: Rig
+    100052: Armature
+    100054: chest
+    100056: finger10_L
+    100058: finger10_R
+    100060: finger11_L
+    100062: finger11_R
+    100064: finger12_L
+    100066: finger12_R
+    100068: finger20_L
+    100070: finger20_R
+    100072: finger21_L
+    100074: finger21_R
+    100076: finger22_L
+    100078: finger22_R
+    100080: finger30_L
+    100082: finger30_R
+    100084: finger31_L
+    100086: finger31_R
+    100088: finger32_L
+    100090: finger32_R
+    100092: finger40_L
+    100094: finger40_R
+    100096: finger41_L
+    100098: finger41_R
+    100100: finger42_L
+    100102: finger42_R
+    100104: finger50_l
+    100106: finger50_r
+    100108: finger51_L
+    100110: finger51_R
+    100112: finger52_L
+    100114: finger52_R
+    100116: Foot_L
+    100118: Foot_R
+    100120: hand_L
+    100122: hand_R
+    100124: head
+    100126: Leg_contro_L
+    100128: Leg_contro_R
+    100130: lower_arm_L
+    100132: lower_arm_R
+    100134: lower_leg_L
+    100136: lower_leg_R
+    100138: neck
+    100140: shoulder_L
+    100142: shoulder_R
+    100144: Toes_L
+    100146: Toes_R
+    100148: torso
+    100150: upper_arm_L
+    100152: upper_arm_R
+    100154: upper_leg_L
+    100156: upper_leg_R
+    400000: Bone
+    400002: Bone_001
+    400004: Bone_002
+    400006: Bone_003
+    400008: Bone_004
+    400010: Bone_005
+    400012: Bone_006
+    400014: Bone_007
+    400016: Bone_008
+    400018: Bone_009
+    400020: Bone_010
+    400022: Bone_011
+    400024: Bone_012
+    400026: Bone_013
+    400028: Bone_014
+    400030: Bone_015
+    400032: Bone_016
+    400034: Bone_017
+    400036: Bone_018
+    400038: Bone_019
+    400040: Bone_020
+    400042: Glass
+    400044: HeadPhone
+    400046: //RootNode
+    400048: Player
+    400050: Rig
+    400052: Armature
+    400054: chest
+    400056: finger10_L
+    400058: finger10_R
+    400060: finger11_L
+    400062: finger11_R
+    400064: finger12_L
+    400066: finger12_R
+    400068: finger20_L
+    400070: finger20_R
+    400072: finger21_L
+    400074: finger21_R
+    400076: finger22_L
+    400078: finger22_R
+    400080: finger30_L
+    400082: finger30_R
+    400084: finger31_L
+    400086: finger31_R
+    400088: finger32_L
+    400090: finger32_R
+    400092: finger40_L
+    400094: finger40_R
+    400096: finger41_L
+    400098: finger41_R
+    400100: finger42_L
+    400102: finger42_R
+    400104: finger50_l
+    400106: finger50_r
+    400108: finger51_L
+    400110: finger51_R
+    400112: finger52_L
+    400114: finger52_R
+    400116: Foot_L
+    400118: Foot_R
+    400120: hand_L
+    400122: hand_R
+    400124: head
+    400126: Leg_contro_L
+    400128: Leg_contro_R
+    400130: lower_arm_L
+    400132: lower_arm_R
+    400134: lower_leg_L
+    400136: lower_leg_R
+    400138: neck
+    400140: shoulder_L
+    400142: shoulder_R
+    400144: Toes_L
+    400146: Toes_R
+    400148: torso
+    400150: upper_arm_L
+    400152: upper_arm_R
+    400154: upper_leg_L
+    400156: upper_leg_R
+    2300000: Glass
+    2300002: HeadPhone
+    2300004: Player
+    3300000: Glass
+    3300002: HeadPhone
+    3300004: Player
+    4300000: Player
+    4300002: HeadPhone
+    4300004: Glass
+    7400000: Default Take
+    7400002: idle
+    7400004: Walk
+    7400006: Idle
+    7400008: OpenScene
+    7400010: idle
+    9500000: //RootNode
+    13700000: Glass
+    13700002: HeadPhone
+    13700004: Player
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: "Avatar creation failed:\n\tTransform 'lower_leg_L' is
+      not an ancestor of 'Foot_L'\n"
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: idle
+      takeName: idle
+      firstFrame: -1
+      lastFrame: 14
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Leg_contro_L
+        weight: 1
+      - path: Armature/Leg_contro_L/Foot_L
+        weight: 1
+      - path: Armature/Leg_contro_L/Foot_L/Toes_L
+        weight: 1
+      - path: Armature/Leg_contro_R
+        weight: 1
+      - path: Armature/Leg_contro_R/Foot_R
+        weight: 1
+      - path: Armature/Leg_contro_R/Foot_R/Toes_R
+        weight: 1
+      - path: Armature/torso
+        weight: 1
+      - path: Armature/torso/chest
+        weight: 1
+      - path: Armature/torso/chest/neck
+        weight: 1
+      - path: Armature/torso/chest/neck/head
+        weight: 1
+      - path: Armature/torso/chest/shoulder_L
+        weight: 1
+      - path: Armature/torso/chest/shoulder_L/upper_arm_L
+        weight: 1
+      - path: Armature/torso/chest/shoulder_L/upper_arm_L/lower_arm_L
+        weight: 1
+      - path: Armature/torso/chest/shoulder_L/upper_arm_L/lower_arm_L/hand_L
+        weight: 1
+      - path: Armature/torso/chest/shoulder_L/upper_arm_L/lower_arm_L/hand_L/finger10_L
+        weight: 1
+      - path: Armature/torso/chest/shoulder_L/upper_arm_L/lower_arm_L/hand_L/finger10_L/finger11_L
+        weight: 1
+      - path: Armature/torso/chest/shoulder_L/upper_arm_L/lower_arm_L/hand_L/finger10_L/finger11_L/finger12_L
+        weight: 1
+      - path: Armature/torso/chest/shoulder_L/upper_arm_L/lower_arm_L/hand_L/finger20_L
+        weight: 1
+      - path: Armature/torso/chest/shoulder_L/upper_arm_L/lower_arm_L/hand_L/finger20_L/finger21_L
+        weight: 1
+      - path: Armature/torso/chest/shoulder_L/upper_arm_L/lower_arm_L/hand_L/finger20_L/finger21_L/finger22_L
+        weight: 1
+      - path: Armature/torso/chest/shoulder_L/upper_arm_L/lower_arm_L/hand_L/finger30_L
+        weight: 1
+      - path: Armature/torso/chest/shoulder_L/upper_arm_L/lower_arm_L/hand_L/finger30_L/finger31_L
+        weight: 1
+      - path: Armature/torso/chest/shoulder_L/upper_arm_L/lower_arm_L/hand_L/finger30_L/finger31_L/finger32_L
+        weight: 1
+      - path: Armature/torso/chest/shoulder_L/upper_arm_L/lower_arm_L/hand_L/finger40_L
+        weight: 1
+      - path: Armature/torso/chest/shoulder_L/upper_arm_L/lower_arm_L/hand_L/finger40_L/finger41_L
+        weight: 1
+      - path: Armature/torso/chest/shoulder_L/upper_arm_L/lower_arm_L/hand_L/finger40_L/finger41_L/finger42_L
+        weight: 1
+      - path: Armature/torso/chest/shoulder_L/upper_arm_L/lower_arm_L/hand_L/finger50_r
+        weight: 1
+      - path: Armature/torso/chest/shoulder_L/upper_arm_L/lower_arm_L/hand_L/finger50_r/finger51_L
+        weight: 1
+      - path: Armature/torso/chest/shoulder_L/upper_arm_L/lower_arm_L/hand_L/finger50_r/finger51_L/finger52_L
+        weight: 1
+      - path: Armature/torso/chest/shoulder_R
+        weight: 1
+      - path: Armature/torso/chest/shoulder_R/upper_arm_R
+        weight: 1
+      - path: Armature/torso/chest/shoulder_R/upper_arm_R/lower_arm_R
+        weight: 1
+      - path: Armature/torso/chest/shoulder_R/upper_arm_R/lower_arm_R/hand_R
+        weight: 1
+      - path: Armature/torso/chest/shoulder_R/upper_arm_R/lower_arm_R/hand_R/finger10_R
+        weight: 1
+      - path: Armature/torso/chest/shoulder_R/upper_arm_R/lower_arm_R/hand_R/finger10_R/finger11_R
+        weight: 1
+      - path: Armature/torso/chest/shoulder_R/upper_arm_R/lower_arm_R/hand_R/finger10_R/finger11_R/finger12_R
+        weight: 1
+      - path: Armature/torso/chest/shoulder_R/upper_arm_R/lower_arm_R/hand_R/finger20_R
+        weight: 1
+      - path: Armature/torso/chest/shoulder_R/upper_arm_R/lower_arm_R/hand_R/finger20_R/finger21_R
+        weight: 1
+      - path: Armature/torso/chest/shoulder_R/upper_arm_R/lower_arm_R/hand_R/finger20_R/finger21_R/finger22_R
+        weight: 1
+      - path: Armature/torso/chest/shoulder_R/upper_arm_R/lower_arm_R/hand_R/finger30_R
+        weight: 1
+      - path: Armature/torso/chest/shoulder_R/upper_arm_R/lower_arm_R/hand_R/finger30_R/finger31_R
+        weight: 1
+      - path: Armature/torso/chest/shoulder_R/upper_arm_R/lower_arm_R/hand_R/finger30_R/finger31_R/finger32_R
+        weight: 1
+      - path: Armature/torso/chest/shoulder_R/upper_arm_R/lower_arm_R/hand_R/finger40_R
+        weight: 1
+      - path: Armature/torso/chest/shoulder_R/upper_arm_R/lower_arm_R/hand_R/finger40_R/finger41_R
+        weight: 1
+      - path: Armature/torso/chest/shoulder_R/upper_arm_R/lower_arm_R/hand_R/finger40_R/finger41_R/finger42_R
+        weight: 1
+      - path: Armature/torso/chest/shoulder_R/upper_arm_R/lower_arm_R/hand_R/finger50_l
+        weight: 1
+      - path: Armature/torso/chest/shoulder_R/upper_arm_R/lower_arm_R/hand_R/finger50_l/finger51_R
+        weight: 1
+      - path: Armature/torso/chest/shoulder_R/upper_arm_R/lower_arm_R/hand_R/finger50_l/finger51_R/finger52_R
+        weight: 1
+      - path: Armature/torso/upper_leg_L
+        weight: 1
+      - path: Armature/torso/upper_leg_L/lower_leg_L
+        weight: 1
+      - path: Armature/torso/upper_leg_R
+        weight: 1
+      - path: Armature/torso/upper_leg_R/lower_leg_R
+        weight: 1
+      - path: Glass
+        weight: 0
+      - path: HeadPhone
+        weight: 0
+      - path: Player
+        weight: 0
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Walk
+      takeName: Walk
+      firstFrame: 0
+      lastFrame: 24
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Leg_contro_L
+        weight: 1
+      - path: Armature/Leg_contro_L/Foot_L
+        weight: 1
+      - path: Armature/Leg_contro_L/Foot_L/Toes_L
+        weight: 1
+      - path: Armature/Leg_contro_R
+        weight: 1
+      - path: Armature/Leg_contro_R/Foot_R
+        weight: 1
+      - path: Armature/Leg_contro_R/Foot_R/Toes_R
+        weight: 1
+      - path: Armature/torso
+        weight: 1
+      - path: Armature/torso/chest
+        weight: 1
+      - path: Armature/torso/chest/neck
+        weight: 1
+      - path: Armature/torso/chest/neck/head
+        weight: 1
+      - path: Armature/torso/chest/shoulder_L
+        weight: 1
+      - path: Armature/torso/chest/shoulder_L/upper_arm_L
+        weight: 1
+      - path: Armature/torso/chest/shoulder_L/upper_arm_L/lower_arm_L
+        weight: 1
+      - path: Armature/torso/chest/shoulder_L/upper_arm_L/lower_arm_L/hand_L
+        weight: 1
+      - path: Armature/torso/chest/shoulder_L/upper_arm_L/lower_arm_L/hand_L/finger10_L
+        weight: 1
+      - path: Armature/torso/chest/shoulder_L/upper_arm_L/lower_arm_L/hand_L/finger10_L/finger11_L
+        weight: 1
+      - path: Armature/torso/chest/shoulder_L/upper_arm_L/lower_arm_L/hand_L/finger10_L/finger11_L/finger12_L
+        weight: 1
+      - path: Armature/torso/chest/shoulder_L/upper_arm_L/lower_arm_L/hand_L/finger20_L
+        weight: 1
+      - path: Armature/torso/chest/shoulder_L/upper_arm_L/lower_arm_L/hand_L/finger20_L/finger21_L
+        weight: 1
+      - path: Armature/torso/chest/shoulder_L/upper_arm_L/lower_arm_L/hand_L/finger20_L/finger21_L/finger22_L
+        weight: 1
+      - path: Armature/torso/chest/shoulder_L/upper_arm_L/lower_arm_L/hand_L/finger30_L
+        weight: 1
+      - path: Armature/torso/chest/shoulder_L/upper_arm_L/lower_arm_L/hand_L/finger30_L/finger31_L
+        weight: 1
+      - path: Armature/torso/chest/shoulder_L/upper_arm_L/lower_arm_L/hand_L/finger30_L/finger31_L/finger32_L
+        weight: 1
+      - path: Armature/torso/chest/shoulder_L/upper_arm_L/lower_arm_L/hand_L/finger40_L
+        weight: 1
+      - path: Armature/torso/chest/shoulder_L/upper_arm_L/lower_arm_L/hand_L/finger40_L/finger41_L
+        weight: 1
+      - path: Armature/torso/chest/shoulder_L/upper_arm_L/lower_arm_L/hand_L/finger40_L/finger41_L/finger42_L
+        weight: 1
+      - path: Armature/torso/chest/shoulder_L/upper_arm_L/lower_arm_L/hand_L/finger50_r
+        weight: 1
+      - path: Armature/torso/chest/shoulder_L/upper_arm_L/lower_arm_L/hand_L/finger50_r/finger51_L
+        weight: 1
+      - path: Armature/torso/chest/shoulder_L/upper_arm_L/lower_arm_L/hand_L/finger50_r/finger51_L/finger52_L
+        weight: 1
+      - path: Armature/torso/chest/shoulder_R
+        weight: 1
+      - path: Armature/torso/chest/shoulder_R/upper_arm_R
+        weight: 1
+      - path: Armature/torso/chest/shoulder_R/upper_arm_R/lower_arm_R
+        weight: 1
+      - path: Armature/torso/chest/shoulder_R/upper_arm_R/lower_arm_R/hand_R
+        weight: 1
+      - path: Armature/torso/chest/shoulder_R/upper_arm_R/lower_arm_R/hand_R/finger10_R
+        weight: 1
+      - path: Armature/torso/chest/shoulder_R/upper_arm_R/lower_arm_R/hand_R/finger10_R/finger11_R
+        weight: 1
+      - path: Armature/torso/chest/shoulder_R/upper_arm_R/lower_arm_R/hand_R/finger10_R/finger11_R/finger12_R
+        weight: 1
+      - path: Armature/torso/chest/shoulder_R/upper_arm_R/lower_arm_R/hand_R/finger20_R
+        weight: 1
+      - path: Armature/torso/chest/shoulder_R/upper_arm_R/lower_arm_R/hand_R/finger20_R/finger21_R
+        weight: 1
+      - path: Armature/torso/chest/shoulder_R/upper_arm_R/lower_arm_R/hand_R/finger20_R/finger21_R/finger22_R
+        weight: 1
+      - path: Armature/torso/chest/shoulder_R/upper_arm_R/lower_arm_R/hand_R/finger30_R
+        weight: 1
+      - path: Armature/torso/chest/shoulder_R/upper_arm_R/lower_arm_R/hand_R/finger30_R/finger31_R
+        weight: 1
+      - path: Armature/torso/chest/shoulder_R/upper_arm_R/lower_arm_R/hand_R/finger30_R/finger31_R/finger32_R
+        weight: 1
+      - path: Armature/torso/chest/shoulder_R/upper_arm_R/lower_arm_R/hand_R/finger40_R
+        weight: 1
+      - path: Armature/torso/chest/shoulder_R/upper_arm_R/lower_arm_R/hand_R/finger40_R/finger41_R
+        weight: 1
+      - path: Armature/torso/chest/shoulder_R/upper_arm_R/lower_arm_R/hand_R/finger40_R/finger41_R/finger42_R
+        weight: 1
+      - path: Armature/torso/chest/shoulder_R/upper_arm_R/lower_arm_R/hand_R/finger50_l
+        weight: 1
+      - path: Armature/torso/chest/shoulder_R/upper_arm_R/lower_arm_R/hand_R/finger50_l/finger51_R
+        weight: 1
+      - path: Armature/torso/chest/shoulder_R/upper_arm_R/lower_arm_R/hand_R/finger50_l/finger51_R/finger52_R
+        weight: 1
+      - path: Armature/torso/upper_leg_L
+        weight: 1
+      - path: Armature/torso/upper_leg_L/lower_leg_L
+        weight: 1
+      - path: Armature/torso/upper_leg_R
+        weight: 1
+      - path: Armature/torso/upper_leg_R/lower_leg_R
+        weight: 1
+      - path: Glass
+        weight: 0
+      - path: HeadPhone
+        weight: 0
+      - path: Player
+        weight: 0
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: OpenScene
+      takeName: OpenScene
+      firstFrame: -1
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Leg_contro_L
+        weight: 1
+      - path: Armature/Leg_contro_L/Foot_L
+        weight: 1
+      - path: Armature/Leg_contro_L/Foot_L/Toes_L
+        weight: 1
+      - path: Armature/Leg_contro_R
+        weight: 1
+      - path: Armature/Leg_contro_R/Foot_R
+        weight: 1
+      - path: Armature/Leg_contro_R/Foot_R/Toes_R
+        weight: 1
+      - path: Armature/torso
+        weight: 1
+      - path: Armature/torso/chest
+        weight: 1
+      - path: Armature/torso/chest/neck
+        weight: 1
+      - path: Armature/torso/chest/neck/head
+        weight: 1
+      - path: Armature/torso/chest/shoulder_L
+        weight: 1
+      - path: Armature/torso/chest/shoulder_L/upper_arm_L
+        weight: 1
+      - path: Armature/torso/chest/shoulder_L/upper_arm_L/lower_arm_L
+        weight: 1
+      - path: Armature/torso/chest/shoulder_L/upper_arm_L/lower_arm_L/hand_L
+        weight: 1
+      - path: Armature/torso/chest/shoulder_L/upper_arm_L/lower_arm_L/hand_L/finger10_L
+        weight: 1
+      - path: Armature/torso/chest/shoulder_L/upper_arm_L/lower_arm_L/hand_L/finger10_L/finger11_L
+        weight: 1
+      - path: Armature/torso/chest/shoulder_L/upper_arm_L/lower_arm_L/hand_L/finger10_L/finger11_L/finger12_L
+        weight: 1
+      - path: Armature/torso/chest/shoulder_L/upper_arm_L/lower_arm_L/hand_L/finger20_L
+        weight: 1
+      - path: Armature/torso/chest/shoulder_L/upper_arm_L/lower_arm_L/hand_L/finger20_L/finger21_L
+        weight: 1
+      - path: Armature/torso/chest/shoulder_L/upper_arm_L/lower_arm_L/hand_L/finger20_L/finger21_L/finger22_L
+        weight: 1
+      - path: Armature/torso/chest/shoulder_L/upper_arm_L/lower_arm_L/hand_L/finger30_L
+        weight: 1
+      - path: Armature/torso/chest/shoulder_L/upper_arm_L/lower_arm_L/hand_L/finger30_L/finger31_L
+        weight: 1
+      - path: Armature/torso/chest/shoulder_L/upper_arm_L/lower_arm_L/hand_L/finger30_L/finger31_L/finger32_L
+        weight: 1
+      - path: Armature/torso/chest/shoulder_L/upper_arm_L/lower_arm_L/hand_L/finger40_L
+        weight: 1
+      - path: Armature/torso/chest/shoulder_L/upper_arm_L/lower_arm_L/hand_L/finger40_L/finger41_L
+        weight: 1
+      - path: Armature/torso/chest/shoulder_L/upper_arm_L/lower_arm_L/hand_L/finger40_L/finger41_L/finger42_L
+        weight: 1
+      - path: Armature/torso/chest/shoulder_L/upper_arm_L/lower_arm_L/hand_L/finger50_r
+        weight: 1
+      - path: Armature/torso/chest/shoulder_L/upper_arm_L/lower_arm_L/hand_L/finger50_r/finger51_L
+        weight: 1
+      - path: Armature/torso/chest/shoulder_L/upper_arm_L/lower_arm_L/hand_L/finger50_r/finger51_L/finger52_L
+        weight: 1
+      - path: Armature/torso/chest/shoulder_R
+        weight: 1
+      - path: Armature/torso/chest/shoulder_R/upper_arm_R
+        weight: 1
+      - path: Armature/torso/chest/shoulder_R/upper_arm_R/lower_arm_R
+        weight: 1
+      - path: Armature/torso/chest/shoulder_R/upper_arm_R/lower_arm_R/hand_R
+        weight: 1
+      - path: Armature/torso/chest/shoulder_R/upper_arm_R/lower_arm_R/hand_R/finger10_R
+        weight: 1
+      - path: Armature/torso/chest/shoulder_R/upper_arm_R/lower_arm_R/hand_R/finger10_R/finger11_R
+        weight: 1
+      - path: Armature/torso/chest/shoulder_R/upper_arm_R/lower_arm_R/hand_R/finger10_R/finger11_R/finger12_R
+        weight: 1
+      - path: Armature/torso/chest/shoulder_R/upper_arm_R/lower_arm_R/hand_R/finger20_R
+        weight: 1
+      - path: Armature/torso/chest/shoulder_R/upper_arm_R/lower_arm_R/hand_R/finger20_R/finger21_R
+        weight: 1
+      - path: Armature/torso/chest/shoulder_R/upper_arm_R/lower_arm_R/hand_R/finger20_R/finger21_R/finger22_R
+        weight: 1
+      - path: Armature/torso/chest/shoulder_R/upper_arm_R/lower_arm_R/hand_R/finger30_R
+        weight: 1
+      - path: Armature/torso/chest/shoulder_R/upper_arm_R/lower_arm_R/hand_R/finger30_R/finger31_R
+        weight: 1
+      - path: Armature/torso/chest/shoulder_R/upper_arm_R/lower_arm_R/hand_R/finger30_R/finger31_R/finger32_R
+        weight: 1
+      - path: Armature/torso/chest/shoulder_R/upper_arm_R/lower_arm_R/hand_R/finger40_R
+        weight: 1
+      - path: Armature/torso/chest/shoulder_R/upper_arm_R/lower_arm_R/hand_R/finger40_R/finger41_R
+        weight: 1
+      - path: Armature/torso/chest/shoulder_R/upper_arm_R/lower_arm_R/hand_R/finger40_R/finger41_R/finger42_R
+        weight: 1
+      - path: Armature/torso/chest/shoulder_R/upper_arm_R/lower_arm_R/hand_R/finger50_l
+        weight: 1
+      - path: Armature/torso/chest/shoulder_R/upper_arm_R/lower_arm_R/hand_R/finger50_l/finger51_R
+        weight: 1
+      - path: Armature/torso/chest/shoulder_R/upper_arm_R/lower_arm_R/hand_R/finger50_l/finger51_R/finger52_R
+        weight: 1
+      - path: Armature/torso/upper_leg_L
+        weight: 1
+      - path: Armature/torso/upper_leg_L/lower_leg_L
+        weight: 1
+      - path: Armature/torso/upper_leg_R
+        weight: 1
+      - path: Armature/torso/upper_leg_R/lower_leg_R
+        weight: 1
+      - path: Glass
+        weight: 0
+      - path: HeadPhone
+        weight: 0
+      - path: Player
+        weight: 0
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human:
+    - boneName: chest
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: torso
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: shoulder_L
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: upper_arm_L
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: lower_arm_L
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: hand_L
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: shoulder_R
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Armature
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: upper_leg_R
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: lower_leg_R
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: upper_arm_R
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: lower_arm_R
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: hand_R
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: neck
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: head
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: upper_leg_L
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: lower_leg_L
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: finger20_L
+      humanName: Left Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: finger21_L
+      humanName: Left Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: finger22_L
+      humanName: Left Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: finger10_L
+      humanName: Left Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: finger11_L
+      humanName: Left Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: finger12_L
+      humanName: Left Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: finger30_L
+      humanName: Left Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: finger31_L
+      humanName: Left Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: finger32_L
+      humanName: Left Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: finger40_L
+      humanName: Left Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: finger41_L
+      humanName: Left Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: finger42_L
+      humanName: Left Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: finger50_r
+      humanName: Left Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: finger51_L
+      humanName: Left Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: finger52_L
+      humanName: Left Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: finger20_R
+      humanName: Right Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: finger21_R
+      humanName: Right Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: finger22_R
+      humanName: Right Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: finger10_R
+      humanName: Right Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: finger11_R
+      humanName: Right Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: finger12_R
+      humanName: Right Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: finger30_R
+      humanName: Right Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: finger31_R
+      humanName: Right Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: finger32_R
+      humanName: Right Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: finger40_R
+      humanName: Right Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: finger41_R
+      humanName: Right Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: finger42_R
+      humanName: Right Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: finger50_l
+      humanName: Right Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: finger51_R
+      humanName: Right Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: finger52_R
+      humanName: Right Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Foot_L
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Toes_L
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Foot_R
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Toes_R
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: mahrouquinho(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Armature
+      parentName: mahrouquinho(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: torso
+      parentName: Armature
+      position: {x: -0, y: 0.26461416, z: 8.610014}
+      rotation: {x: -0.4653905, y: 0.46539035, z: 0.5323644, w: 0.5323642}
+      scale: {x: 0.9999998, y: 1, z: 1}
+    - name: chest
+      parentName: torso
+      position: {x: -3.5999055, y: 0.00000027178535, z: 0}
+      rotation: {x: 0.985448, y: -0.000000034633757, z: -0.16997713, w: 0.00000012134241}
+      scale: {x: 1.0000004, y: 1, z: 1}
+    - name: neck
+      parentName: chest
+      position: {x: -1.8677104, y: 0.00000014100831, z: 0.00000020861617}
+      rotation: {x: 0.9764586, y: -0.00000003635969, z: -0.21570492, w: -0.00000025538864}
+      scale: {x: 0.9999997, y: 1, z: 0.99999994}
+    - name: head
+      parentName: neck
+      position: {x: -1.0870299, y: 0.00000008206848, z: 0.0000002235174}
+      rotation: {x: 0.9928568, y: 0.00000028539452, z: -0.11931226, w: 0.0000031614404}
+      scale: {x: 0.9999996, y: 1, z: 0.99999994}
+    - name: shoulder_L
+      parentName: chest
+      position: {x: -1.6014762, y: -0.44625112, z: -0.00626086}
+      rotation: {x: -0.34783882, y: -0.53179824, z: 0.6127303, w: 0.4698515}
+      scale: {x: 0.99999994, y: 0.99999994, z: 1}
+    - name: upper_arm_L
+      parentName: shoulder_L
+      position: {x: -1.7594955, y: 0.00000014949333, z: -0.0000013085082}
+      rotation: {x: -0.072178654, y: 0.14554243, z: 0.010721861, w: 0.9866574}
+      scale: {x: 0.9999998, y: 0.9999999, z: 0.99999994}
+    - name: lower_arm_L
+      parentName: upper_arm_L
+      position: {x: -2.0188155, y: 0.0000001916323, z: -0.00000017881393}
+      rotation: {x: 0.28023177, y: 0.000041097384, z: 0.02929446, w: 0.9594853}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1}
+    - name: hand_L
+      parentName: lower_arm_L
+      position: {x: -2.5800438, y: 0.00000028261638, z: 0.00000041443855}
+      rotation: {x: 0.21225674, y: 0.028767463, z: 0.085215114, w: 0.9730662}
+      scale: {x: 1.0000001, y: 1, z: 0.99999994}
+    - name: finger10_L
+      parentName: hand_L
+      position: {x: -0.27795443, y: -0.25867528, z: 0.25423974}
+      rotation: {x: 0.49045345, y: 0.09839523, z: 0.12656856, w: 0.85659456}
+      scale: {x: 0.9999998, y: 1.0000001, z: 1.0000001}
+    - name: finger11_L
+      parentName: finger10_L
+      position: {x: -0.2558496, y: -0.00000021895903, z: 0.00000016391277}
+      rotation: {x: -0.008471278, y: -0.034269404, z: -0.0017935142, w: 0.9993751}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: finger12_L
+      parentName: finger11_L
+      position: {x: -0.2597814, y: 0.00000015992555, z: -0.0000003874302}
+      rotation: {x: 0.03458227, y: -0.15798819, z: 0.019382216, w: 0.9866449}
+      scale: {x: 1, y: 1, z: 1.0000001}
+    - name: finger20_L
+      parentName: hand_L
+      position: {x: -0.73135906, y: -0.3138684, z: 0.17644176}
+      rotation: {x: 0.34602532, y: 0.3569666, z: 0.19947729, w: 0.844423}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: finger21_L
+      parentName: finger20_L
+      position: {x: -0.26962596, y: 0.00000036713845, z: -0.00000017881393}
+      rotation: {x: 0.052830257, y: -0.023472162, z: 0.027517658, w: 0.9979483}
+      scale: {x: 1, y: 1, z: 1}
+    - name: finger22_L
+      parentName: finger21_L
+      position: {x: -0.23105708, y: -0.00000021383516, z: -0.00000011920929}
+      rotation: {x: 0.06328387, y: 0.027738096, z: 0.03330952, w: 0.9970538}
+      scale: {x: 0.9999999, y: 0.9999999, z: 1}
+    - name: finger30_L
+      parentName: hand_L
+      position: {x: -0.8574773, y: -0.16006127, z: 0.047025412}
+      rotation: {x: 0.45937365, y: 0.03370654, z: 0.1409237, w: 0.8763448}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+    - name: finger31_L
+      parentName: finger30_L
+      position: {x: -0.23004599, y: 0.000000035700396, z: -0.0000005066395}
+      rotation: {x: 0.30622664, y: 0.0048421565, z: 0.035642307, w: 0.95127887}
+      scale: {x: 0.9999999, y: 0.9999998, z: 0.9999999}
+    - name: finger32_L
+      parentName: finger31_L
+      position: {x: -0.2768172, y: 0.00000054785187, z: -0.00000017881393}
+      rotation: {x: -0.0956354, y: -0.014760591, z: -0.048174456, w: 0.99414045}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: finger40_L
+      parentName: hand_L
+      position: {x: -0.86243635, y: 0.010803305, z: -0.08797674}
+      rotation: {x: 0.44142994, y: 0.008906782, z: 0.12672618, w: 0.88825715}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1}
+    - name: finger41_L
+      parentName: finger40_L
+      position: {x: -0.26147184, y: -0.00000025374902, z: 0.000000014901161}
+      rotation: {x: 0.3637972, y: 0.008926793, z: 0.035147052, w: 0.93077207}
+      scale: {x: 0.99999994, y: 1, z: 1}
+    - name: finger42_L
+      parentName: finger41_L
+      position: {x: -0.21871631, y: -0.00000028609296, z: -0.000000059604645}
+      rotation: {x: -0.06014151, y: 0.0043879016, z: -0.026650928, w: 0.99782443}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: finger50_r
+      parentName: hand_L
+      position: {x: -0.8781363, y: 0.13274398, z: -0.2840407}
+      rotation: {x: 0.24531402, y: -0.030323204, z: 0.083193034, w: 0.96539134}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: finger51_L
+      parentName: finger50_r
+      position: {x: -0.19933932, y: 0.00000001637136, z: -0.00000014575198}
+      rotation: {x: 0.3651576, y: 0.023574602, z: 0.027265057, w: 0.9302478}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: finger52_L
+      parentName: finger51_L
+      position: {x: -0.19327524, y: -0.00000009515861, z: -0.00000017881393}
+      rotation: {x: 0.10294864, y: 0.04754658, z: 0.05076824, w: 0.99225175}
+      scale: {x: 1, y: 0.9999999, z: 0.9999998}
+    - name: shoulder_R
+      parentName: chest
+      position: {x: -1.5994481, y: 0.44951057, z: -0.0045571057}
+      rotation: {x: -0.47734463, y: 0.6242401, z: -0.5182399, w: 0.33748186}
+      scale: {x: 1.0000004, y: 1.0000004, z: 1.0000001}
+    - name: upper_arm_R
+      parentName: shoulder_R
+      position: {x: -1.7594949, y: 0.00000015087426, z: 0.0000010454096}
+      rotation: {x: -0.21678428, y: -0.14092782, z: -0.037896387, w: 0.9652501}
+      scale: {x: 0.99999994, y: 0.9999999, z: 1}
+    - name: lower_arm_R
+      parentName: upper_arm_R
+      position: {x: -2.0188146, y: 0.00000029802322, z: -0.00000040233135}
+      rotation: {x: 0.4269195, y: 0.002700313, z: 0.02918021, w: 0.90381473}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: hand_R
+      parentName: lower_arm_R
+      position: {x: -2.5800416, y: -0.00000021234155, z: -0.000000020489097}
+      rotation: {x: 0.2664726, y: 0.074685976, z: 0.05014328, w: 0.9596353}
+      scale: {x: 1, y: 1, z: 1}
+    - name: finger10_R
+      parentName: hand_R
+      position: {x: -0.27795416, y: -0.19181955, z: 0.30782387}
+      rotation: {x: 0.4513292, y: 0.13637339, z: -0.08428027, w: 0.8778389}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: finger11_R
+      parentName: finger10_R
+      position: {x: -0.25584912, y: 0.00000033527613, z: 0.00000023841858}
+      rotation: {x: 0.13788868, y: -0.023394153, z: 0.025103053, w: 0.98985314}
+      scale: {x: 1, y: 0.99999994, z: 0.99999994}
+    - name: finger12_R
+      parentName: finger11_R
+      position: {x: -0.25978148, y: -0.000000014901161, z: -0.00000017881393}
+      rotation: {x: 0.11474938, y: -0.095438965, z: 0.12738654, w: 0.98055935}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: finger20_R
+      parentName: hand_R
+      position: {x: -0.7313582, y: -0.10387114, z: 0.34475437}
+      rotation: {x: 0.49186608, y: 0.4061553, z: -0.04759252, w: 0.7686617}
+      scale: {x: 1.0000001, y: 0.99999994, z: 0.99999994}
+    - name: finger21_R
+      parentName: finger20_R
+      position: {x: -0.26962468, y: 0, z: -0.0000005364418}
+      rotation: {x: 0.063597724, y: -0.03556462, z: -0.006581783, w: 0.99732}
+      scale: {x: 1, y: 0.99999994, z: 1.0000001}
+    - name: finger22_R
+      parentName: finger21_R
+      position: {x: -0.2310572, y: -0.00000014901161, z: 0}
+      rotation: {x: 0.058562282, y: -0.009704829, z: -0.042246185, w: 0.9973422}
+      scale: {x: 0.9999999, y: 0.99999994, z: 0.9999999}
+    - name: finger30_R
+      parentName: hand_R
+      position: {x: -0.8574765, y: -0.011047438, z: 0.16645989}
+      rotation: {x: 0.47774887, y: 0.08174201, z: -0.11964505, w: 0.8664638}
+      scale: {x: 1.0000001, y: 0.9999999, z: 1}
+    - name: finger31_R
+      parentName: finger30_R
+      position: {x: -0.23004627, y: 0.00000022351742, z: -0.0000003874302}
+      rotation: {x: 0.3460408, y: -0.03286038, z: -0.014621758, w: 0.93752986}
+      scale: {x: 0.99999994, y: 1, z: 0.9999999}
+    - name: finger32_R
+      parentName: finger31_R
+      position: {x: -0.27681774, y: 0.000000029802322, z: 0.00000023841858}
+      rotation: {x: -0.1164426, y: 0.049968258, z: 0.006467334, w: 0.99191856}
+      scale: {x: 0.99999994, y: 0.9999999, z: 0.9999999}
+    - name: finger40_R
+      parentName: hand_R
+      position: {x: -0.8624357, y: 0.08351449, z: -0.029698774}
+      rotation: {x: 0.45362532, y: 0.059255853, z: -0.1123755, w: 0.88209105}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: finger41_R
+      parentName: finger40_R
+      position: {x: -0.2614721, y: 0.000000067055225, z: 0.00000017881393}
+      rotation: {x: 0.38790843, y: -0.03133644, z: -0.018240519, w: 0.9209845}
+      scale: {x: 1, y: 1, z: 1.0000001}
+    - name: finger42_R
+      parentName: finger41_R
+      position: {x: -0.21871668, y: 0.000000014901161, z: 0}
+      rotation: {x: -0.07778118, y: 0.023468144, z: -0.013370477, w: 0.99660456}
+      scale: {x: 1, y: 0.9999999, z: 0.9999999}
+    - name: finger50_l
+      parentName: hand_R
+      position: {x: -0.8781357, y: 0.24832505, z: -0.19140239}
+      rotation: {x: 0.236602, y: 0.043468196, z: -0.07714626, w: 0.9675632}
+      scale: {x: 1, y: 0.9999999, z: 1}
+    - name: finger51_R
+      parentName: finger50_l
+      position: {x: -0.19933873, y: -0.00000011280645, z: 0.00000009522773}
+      rotation: {x: 0.35181385, y: 0.012466097, z: -0.033825535, w: 0.9353756}
+      scale: {x: 0.99999976, y: 0.9999997, z: 0.9999998}
+    - name: finger52_R
+      parentName: finger51_R
+      position: {x: -0.19327573, y: 0.00000021606684, z: -0.0000001527369}
+      rotation: {x: 0.09861512, y: -0.03596413, z: -0.059537083, w: 0.9926918}
+      scale: {x: 0.99999994, y: 1.0000001, z: 0.99999994}
+    - name: upper_leg_L
+      parentName: torso
+      position: {x: 1.3196315, y: 0.83716273, z: -0.1779606}
+      rotation: {x: 0.000087968794, y: 0.99012727, z: -0.0006055064, w: -0.1401704}
+      scale: {x: 1, y: 1.0000001, z: 1.0000008}
+    - name: lower_leg_L
+      parentName: upper_leg_L
+      position: {x: -3.3062367, y: 0.00000018189894, z: -0.000000047963113}
+      rotation: {x: 0.9893262, y: -0.000024946, z: 0.14501205, w: 0.014326787}
+      scale: {x: 1.0000001, y: 1.0000001, z: 0.99999976}
+    - name: Foot_L
+      parentName: lower_leg_L
+      position: {x: -3.1143346, y: 0, z: 0}
+      rotation: {x: -0.92665315, y: 0.0031979561, z: -0.37566707, w: 0.013343157}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Toes_L
+      parentName: Foot_L
+      position: {x: -0.75578606, y: 0.00000007607593, z: 0.000000028149472}
+      rotation: {x: -0.0000026179102, y: 0.4303307, z: 0.0000011621611, w: 0.90267134}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Leg_contro_L
+      parentName: upper_leg_L
+      position: {x: -7.017228, y: -0.03097877, z: -1.5114437}
+      rotation: {x: -0.7571946, y: 0.0005136107, z: 0.6531892, w: -0.00033287107}
+      scale: {x: 1, y: 1, z: 1}
+    - name: upper_leg_R
+      parentName: torso
+      position: {x: 1.3196313, y: -0.83716285, z: -0.1779612}
+      rotation: {x: -0.004074631, y: 0.9901267, z: 0.001172656, w: -0.14011101}
+      scale: {x: 1, y: 1, z: 1.0000006}
+    - name: lower_leg_R
+      parentName: upper_leg_R
+      position: {x: -3.3062363, y: 0.0000004391768, z: -0.00000014243415}
+      rotation: {x: 0.9893347, y: 0.004134613, z: 0.14495368, w: 0.013717204}
+      scale: {x: 1.0000004, y: 1, z: 0.99999994}
+    - name: Foot_R
+      parentName: lower_leg_R
+      position: {x: -3.1143322, y: 0, z: 0}
+      rotation: {x: -0.9266607, y: 0.0034748756, z: -0.37560308, w: 0.014499226}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Toes_R
+      parentName: Foot_R
+      position: {x: -0.7557862, y: 0.00000000937969, z: -0.00000003649791}
+      rotation: {x: -0.0000039091087, y: 0.43033054, z: 0.0000015705949, w: 0.9026714}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: Leg_contro_R
+      parentName: upper_leg_R
+      position: {x: -7.017416, y: -0.025529865, z: -1.5106529}
+      rotation: {x: -0.7571495, y: -0.0035648902, z: 0.6532278, w: -0.0022966107}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Glass
+      parentName: mahrouquinho(Clone)
+      position: {x: -0, y: 0, z: 7.7921157}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.41553402, y: 0.41553402, z: 0.41553402}
+    - name: HeadPhone
+      parentName: mahrouquinho(Clone)
+      position: {x: -0, y: 0, z: 7.7921157}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Player
+      parentName: mahrouquinho(Clone)
+      position: {x: -0, y: 0, z: 7.7921157}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.6901884, y: 0.6901884, z: 0.6901884}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 3
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
