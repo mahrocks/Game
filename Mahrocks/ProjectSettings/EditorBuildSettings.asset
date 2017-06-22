@@ -9,3 +9,11 @@ EditorBuildSettings:
     path: Assets/_Scenes/MenuScene.unity
   - enabled: 1
     path: Assets/_Scenes/Phase1Scene.unity
+  - enabled: 1
+    path: Assets/_Scenes/TutorialPlayabilityScene.unity
+  - enabled: 1
+    path: Assets/_Scenes/TutorialUIScene.unity
+  - enabled: 1
+    path: Assets/_Scenes/TutorialEnemiesScene.unity
+  - enabled: 1
+    path: Assets/_Scenes/TutorialPickablesScene.unity

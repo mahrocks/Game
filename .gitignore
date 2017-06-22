@@ -240,11 +240,3 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
-*.info
-*.dll
-*.dll
-*.bin
-
-#Keep only Assets Folder
-Mahrocks/*
-!Mahrocks/Assets/*
