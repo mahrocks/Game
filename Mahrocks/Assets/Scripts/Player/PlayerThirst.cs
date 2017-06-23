@@ -59,7 +59,7 @@ public class PlayerThirst : MonoBehaviour {
 		if (other.gameObject.CompareTag ("Chopp"))
 		{
 			Destroy (other.gameObject);
-			RecoverBeer (Random.Range (5 , 15));
+			RecoverBeer (Random.Range (20 , 30));
 			playerBurpSound.Play ();
 
 		}
