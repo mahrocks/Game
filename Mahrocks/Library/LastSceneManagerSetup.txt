@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/_Scenes/TutorialUIScene.unity
+- path: Assets/_Scenes/MenuScene.unity
   isLoaded: 1
   isActive: 1
