@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SunController : MonoBehaviour
 {
-	private float dayspeed = 5f;
+	private float dayspeed = 2f;
 
 	public GameObject map;
 	// Use this for initialization

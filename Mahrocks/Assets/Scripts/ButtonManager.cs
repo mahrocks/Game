@@ -7,4 +7,11 @@ public class ButtonManager : MonoBehaviour {
 	public void starGame(string newGameScene){
 		SceneManager.LoadScene (newGameScene);
 	}
+
+	void Update(){
+		if (Input.GetKeyDown (KeyCode.Escape)) {
+			Application.Quit ();
+		} 
+	}
+		
 }

@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class MoonController : MonoBehaviour
 {
-	private float nightspeed = 5f;
-	private float starsspeed = 2f;
+	private float nightspeed = 2f;
+	private float starsspeed = 0.7f;
 	private ParticleSystem teste;
 
 	public GameObject map;

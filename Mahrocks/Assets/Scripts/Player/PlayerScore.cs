@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerScore : MonoBehaviour
 {
@@ -50,6 +51,12 @@ public class PlayerScore : MonoBehaviour
 	{
 		if (!playerWon) {
 			increaseTimer ();
+		}
+
+		if (Input.GetKeyDown (KeyCode.R)) {
+			SceneManager.LoadScene ("Phase1Scene");
+		} else if (Input.GetKeyDown (KeyCode.Escape)) {
+			SceneManager.LoadScene ("MenuScene");
 		}
 	}
 
